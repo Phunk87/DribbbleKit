@@ -7,6 +7,7 @@
 //
 
 #import "DKComment.h"
+#import "DKComments.h"
 #import "DKPlayer.h"
 
 
@@ -17,5 +18,6 @@
 @dynamic creationDate;
 @dynamic likesCount;
 @dynamic player;
+@dynamic comments;
 
 @end

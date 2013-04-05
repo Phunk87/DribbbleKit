@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class DKPlayer;
+@class DKComments, DKPlayer;
 
 @interface DKComment : NSManagedObject
 
@@ -18,5 +18,6 @@
 @property (nonatomic, retain) NSDate * creationDate;
 @property (nonatomic, retain) NSNumber * likesCount;
 @property (nonatomic, retain) DKPlayer *player;
+@property (nonatomic, retain) DKComments *comments;
 
 @end

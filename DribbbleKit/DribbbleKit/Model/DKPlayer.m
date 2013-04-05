@@ -7,6 +7,9 @@
 //
 
 #import "DKPlayer.h"
+#import "DKComment.h"
+#import "DKPlayers.h"
+#import "DKShot.h"
 
 
 @implementation DKPlayer
@@ -29,5 +32,8 @@
 @dynamic twitterScreenName;
 @dynamic url;
 @dynamic userName;
+@dynamic players;
+@dynamic comment;
+@dynamic shot;
 
 @end

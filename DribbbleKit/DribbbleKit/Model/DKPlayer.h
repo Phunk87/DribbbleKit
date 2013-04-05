@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class DKComment, DKPlayers, DKShot;
 
 @interface DKPlayer : NSManagedObject
 
@@ -30,5 +31,8 @@
 @property (nonatomic, retain) NSString * twitterScreenName;
 @property (nonatomic, retain) NSString * url;
 @property (nonatomic, retain) NSString * userName;
+@property (nonatomic, retain) DKPlayers *players;
+@property (nonatomic, retain) DKComment *comment;
+@property (nonatomic, retain) DKShot *shot;
 
 @end

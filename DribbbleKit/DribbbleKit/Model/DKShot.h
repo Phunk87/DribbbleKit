@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class DKPlayer;
+@class DKPlayer, DKShots;
 
 @interface DKShot : NSManagedObject
 
@@ -28,5 +28,6 @@
 @property (nonatomic, retain) NSNumber * viewsCount;
 @property (nonatomic, retain) NSNumber * width;
 @property (nonatomic, retain) DKPlayer *player;
+@property (nonatomic, retain) DKShots *shots;
 
 @end

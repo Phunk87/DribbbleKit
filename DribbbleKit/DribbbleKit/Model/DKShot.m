@@ -8,6 +8,7 @@
 
 #import "DKShot.h"
 #import "DKPlayer.h"
+#import "DKShots.h"
 
 
 @implementation DKShot
@@ -27,5 +28,6 @@
 @dynamic viewsCount;
 @dynamic width;
 @dynamic player;
+@dynamic shots;
 
 @end

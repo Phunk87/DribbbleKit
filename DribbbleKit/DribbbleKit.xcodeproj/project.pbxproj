@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76109719170F357A005176A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109718170F357A005176A7 /* Foundation.framework */; };
+		7610971E170F357A005176A7 /* DribbbleKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7610971D170F357A005176A7 /* DribbbleKit.h */; };
+		76109720170F357A005176A7 /* DribbbleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7610971F170F357A005176A7 /* DribbbleKit.m */; };
+		76109728170F357B005176A7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109727170F357B005176A7 /* SenTestingKit.framework */; };
+		7610972A170F357B005176A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109729170F357B005176A7 /* UIKit.framework */; };
+		7610972B170F357B005176A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109718170F357A005176A7 /* Foundation.framework */; };
+		7610972E170F357B005176A7 /* libDribbbleKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109715170F357A005176A7 /* libDribbbleKit.a */; };
+		76109734170F357B005176A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76109732170F357B005176A7 /* InfoPlist.strings */; };
+		76109737170F357B005176A7 /* DribbbleKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109736170F357B005176A7 /* DribbbleKitTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7610972C170F357B005176A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7610970D170F357A005176A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76109714170F357A005176A7;
+			remoteInfo = DribbbleKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		76109713170F357A005176A7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				7610971E170F357A005176A7 /* DribbbleKit.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		76109715170F357A005176A7 /* libDribbbleKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDribbbleKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		76109718170F357A005176A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7610971C170F357A005176A7 /* DribbbleKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DribbbleKit-Prefix.pch"; sourceTree = "<group>"; };
+		7610971D170F357A005176A7 /* DribbbleKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DribbbleKit.h; sourceTree = "<group>"; };
+		7610971F170F357A005176A7 /* DribbbleKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DribbbleKit.m; sourceTree = "<group>"; };
+		76109726170F357B005176A7 /* DribbbleKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DribbbleKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76109727170F357B005176A7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		76109729170F357B005176A7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		76109731170F357B005176A7 /* DribbbleKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DribbbleKitTests-Info.plist"; sourceTree = "<group>"; };
+		76109733170F357B005176A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		76109735170F357B005176A7 /* DribbbleKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DribbbleKitTests.h; sourceTree = "<group>"; };
+		76109736170F357B005176A7 /* DribbbleKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DribbbleKitTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76109712170F357A005176A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76109719170F357A005176A7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76109722170F357B005176A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76109728170F357B005176A7 /* SenTestingKit.framework in Frameworks */,
+				7610972A170F357B005176A7 /* UIKit.framework in Frameworks */,
+				7610972B170F357B005176A7 /* Foundation.framework in Frameworks */,
+				7610972E170F357B005176A7 /* libDribbbleKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7610970C170F357A005176A7 = {
+			isa = PBXGroup;
+			children = (
+				7610971A170F357A005176A7 /* DribbbleKit */,
+				7610972F170F357B005176A7 /* DribbbleKitTests */,
+				76109717170F357A005176A7 /* Frameworks */,
+				76109716170F357A005176A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76109716170F357A005176A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76109715170F357A005176A7 /* libDribbbleKit.a */,
+				76109726170F357B005176A7 /* DribbbleKitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76109717170F357A005176A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76109718170F357A005176A7 /* Foundation.framework */,
+				76109727170F357B005176A7 /* SenTestingKit.framework */,
+				76109729170F357B005176A7 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7610971A170F357A005176A7 /* DribbbleKit */ = {
+			isa = PBXGroup;
+			children = (
+				7610971D170F357A005176A7 /* DribbbleKit.h */,
+				7610971F170F357A005176A7 /* DribbbleKit.m */,
+				7610971B170F357A005176A7 /* Supporting Files */,
+			);
+			path = DribbbleKit;
+			sourceTree = "<group>";
+		};
+		7610971B170F357A005176A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7610971C170F357A005176A7 /* DribbbleKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7610972F170F357B005176A7 /* DribbbleKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				76109735170F357B005176A7 /* DribbbleKitTests.h */,
+				76109736170F357B005176A7 /* DribbbleKitTests.m */,
+				76109730170F357B005176A7 /* Supporting Files */,
+			);
+			path = DribbbleKitTests;
+			sourceTree = "<group>";
+		};
+		76109730170F357B005176A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76109731170F357B005176A7 /* DribbbleKitTests-Info.plist */,
+				76109732170F357B005176A7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76109714170F357A005176A7 /* DribbbleKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7610973A170F357B005176A7 /* Build configuration list for PBXNativeTarget "DribbbleKit" */;
+			buildPhases = (
+				76109711170F357A005176A7 /* Sources */,
+				76109712170F357A005176A7 /* Frameworks */,
+				76109713170F357A005176A7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DribbbleKit;
+			productName = DribbbleKit;
+			productReference = 76109715170F357A005176A7 /* libDribbbleKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		76109725170F357B005176A7 /* DribbbleKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7610973D170F357B005176A7 /* Build configuration list for PBXNativeTarget "DribbbleKitTests" */;
+			buildPhases = (
+				76109721170F357B005176A7 /* Sources */,
+				76109722170F357B005176A7 /* Frameworks */,
+				76109723170F357B005176A7 /* Resources */,
+				76109724170F357B005176A7 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7610972D170F357B005176A7 /* PBXTargetDependency */,
+			);
+			name = DribbbleKitTests;
+			productName = DribbbleKitTests;
+			productReference = 76109726170F357B005176A7 /* DribbbleKitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7610970D170F357A005176A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = All4Love;
+			};
+			buildConfigurationList = 76109710170F357A005176A7 /* Build configuration list for PBXProject "DribbbleKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7610970C170F357A005176A7;
+			productRefGroup = 76109716170F357A005176A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76109714170F357A005176A7 /* DribbbleKit */,
+				76109725170F357B005176A7 /* DribbbleKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76109723170F357B005176A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76109734170F357B005176A7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		76109724170F357B005176A7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76109711170F357A005176A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76109720170F357A005176A7 /* DribbbleKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76109721170F357B005176A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76109737170F357B005176A7 /* DribbbleKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7610972D170F357B005176A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76109714170F357A005176A7 /* DribbbleKit */;
+			targetProxy = 7610972C170F357B005176A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		76109732170F357B005176A7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76109733170F357B005176A7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76109738170F357B005176A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		76109739170F357B005176A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7610973B170F357B005176A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DribbbleKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DribbbleKit/DribbbleKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7610973C170F357B005176A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DribbbleKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DribbbleKit/DribbbleKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7610973E170F357B005176A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DribbbleKit/DribbbleKit-Prefix.pch";
+				INFOPLIST_FILE = "DribbbleKitTests/DribbbleKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7610973F170F357B005176A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DribbbleKit/DribbbleKit-Prefix.pch";
+				INFOPLIST_FILE = "DribbbleKitTests/DribbbleKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76109710170F357A005176A7 /* Build configuration list for PBXProject "DribbbleKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76109738170F357B005176A7 /* Debug */,
+				76109739170F357B005176A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7610973A170F357B005176A7 /* Build configuration list for PBXNativeTarget "DribbbleKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7610973B170F357B005176A7 /* Debug */,
+				7610973C170F357B005176A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7610973D170F357B005176A7 /* Build configuration list for PBXNativeTarget "DribbbleKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7610973E170F357B005176A7 /* Debug */,
+				7610973F170F357B005176A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7610970D170F357A005176A7 /* Project object */;
+}

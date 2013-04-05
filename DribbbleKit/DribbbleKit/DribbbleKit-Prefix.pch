@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'DribbbleKit' target in the 'DribbbleKit' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

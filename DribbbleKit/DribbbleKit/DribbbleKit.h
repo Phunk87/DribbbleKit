@@ -6,8 +6,15 @@
 //  Copyright (c) 2013年 All4Love. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef DribbbleKit_DribbbleKit_h
+#define DribbbleKit_DribbbleKit_h
 
-@interface DribbbleKit : NSObject
+// Model
+#import "DKPlayer.h"
+#import "DKPlayers.h"
+#import "DKComment.h"
+#import "DKComments.h"
+#import "DKShot.h"
+#import "DKShots.h"
 
-@end
+#endif

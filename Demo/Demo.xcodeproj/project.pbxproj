@@ -36,6 +36,13 @@
 			remoteGlobalIDString = 76109726170F357B005176A7;
 			remoteInfo = DribbbleKitTests;
 		};
+		7610977F170F38AA005176A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76109772170F3632005176A7 /* DribbbleKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 76109714170F357A005176A7;
+			remoteInfo = DribbbleKit;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +159,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				76109780170F38AA005176A7 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -235,6 +243,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76109780170F38AA005176A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DribbbleKit;
+			targetProxy = 7610977F170F38AA005176A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		76109755170F35BA005176A7 /* InfoPlist.strings */ = {

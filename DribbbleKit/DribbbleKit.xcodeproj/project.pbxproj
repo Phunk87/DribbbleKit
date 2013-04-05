@@ -8,14 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		76109719170F357A005176A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109718170F357A005176A7 /* Foundation.framework */; };
-		7610971E170F357A005176A7 /* DribbbleKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7610971D170F357A005176A7 /* DribbbleKit.h */; };
-		76109720170F357A005176A7 /* DribbbleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7610971F170F357A005176A7 /* DribbbleKit.m */; };
 		76109728170F357B005176A7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109727170F357B005176A7 /* SenTestingKit.framework */; };
 		7610972A170F357B005176A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109729170F357B005176A7 /* UIKit.framework */; };
 		7610972B170F357B005176A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109718170F357A005176A7 /* Foundation.framework */; };
 		7610972E170F357B005176A7 /* libDribbbleKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109715170F357A005176A7 /* libDribbbleKit.a */; };
 		76109734170F357B005176A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76109732170F357B005176A7 /* InfoPlist.strings */; };
 		76109737170F357B005176A7 /* DribbbleKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109736170F357B005176A7 /* DribbbleKitTests.m */; };
+		761097D1170F5046005176A7 /* DKComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097D0170F5046005176A7 /* DKComment.m */; };
+		761097D4170F5047005176A7 /* DKShots.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097D3170F5047005176A7 /* DKShots.m */; };
+		761097D7170F5048005176A7 /* DKShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097D6170F5047005176A7 /* DKShot.m */; };
+		761097DA170F5048005176A7 /* DKComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097D9170F5048005176A7 /* DKComments.m */; };
+		761097DD170F5048005176A7 /* DKPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097DC170F5048005176A7 /* DKPlayer.m */; };
+		761097E0170F5048005176A7 /* DKPlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097DF170F5048005176A7 /* DKPlayers.m */; };
+		761097E3170F505D005176A7 /* DribbbleKitModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 761097E1170F505D005176A7 /* DribbbleKitModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +40,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				7610971E170F357A005176A7 /* DribbbleKit.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,8 +49,6 @@
 		76109715170F357A005176A7 /* libDribbbleKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDribbbleKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		76109718170F357A005176A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7610971C170F357A005176A7 /* DribbbleKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DribbbleKit-Prefix.pch"; sourceTree = "<group>"; };
-		7610971D170F357A005176A7 /* DribbbleKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DribbbleKit.h; sourceTree = "<group>"; };
-		7610971F170F357A005176A7 /* DribbbleKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DribbbleKit.m; sourceTree = "<group>"; };
 		76109726170F357B005176A7 /* DribbbleKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DribbbleKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76109727170F357B005176A7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		76109729170F357B005176A7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -54,6 +56,20 @@
 		76109733170F357B005176A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		76109735170F357B005176A7 /* DribbbleKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DribbbleKitTests.h; sourceTree = "<group>"; };
 		76109736170F357B005176A7 /* DribbbleKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DribbbleKitTests.m; sourceTree = "<group>"; };
+		76109782170F3988005176A7 /* DribbbleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DribbbleKit.h; sourceTree = "<group>"; };
+		761097CF170F5046005176A7 /* DKComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKComment.h; path = Model/DKComment.h; sourceTree = "<group>"; };
+		761097D0170F5046005176A7 /* DKComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKComment.m; path = Model/DKComment.m; sourceTree = "<group>"; };
+		761097D2170F5047005176A7 /* DKShots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKShots.h; path = Model/DKShots.h; sourceTree = "<group>"; };
+		761097D3170F5047005176A7 /* DKShots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKShots.m; path = Model/DKShots.m; sourceTree = "<group>"; };
+		761097D5170F5047005176A7 /* DKShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKShot.h; path = Model/DKShot.h; sourceTree = "<group>"; };
+		761097D6170F5047005176A7 /* DKShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKShot.m; path = Model/DKShot.m; sourceTree = "<group>"; };
+		761097D8170F5048005176A7 /* DKComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKComments.h; path = Model/DKComments.h; sourceTree = "<group>"; };
+		761097D9170F5048005176A7 /* DKComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKComments.m; path = Model/DKComments.m; sourceTree = "<group>"; };
+		761097DB170F5048005176A7 /* DKPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKPlayer.h; path = Model/DKPlayer.h; sourceTree = "<group>"; };
+		761097DC170F5048005176A7 /* DKPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKPlayer.m; path = Model/DKPlayer.m; sourceTree = "<group>"; };
+		761097DE170F5048005176A7 /* DKPlayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKPlayers.h; path = Model/DKPlayers.h; sourceTree = "<group>"; };
+		761097DF170F5048005176A7 /* DKPlayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKPlayers.m; path = Model/DKPlayers.m; sourceTree = "<group>"; };
+		761097E2170F505D005176A7 /* DribbbleKitModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DribbbleKitModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +127,8 @@
 		7610971A170F357A005176A7 /* DribbbleKit */ = {
 			isa = PBXGroup;
 			children = (
-				7610971D170F357A005176A7 /* DribbbleKit.h */,
-				7610971F170F357A005176A7 /* DribbbleKit.m */,
+				76109782170F3988005176A7 /* DribbbleKit.h */,
+				761097E4170F508F005176A7 /* Model */,
 				7610971B170F357A005176A7 /* Supporting Files */,
 			);
 			path = DribbbleKit;
@@ -143,6 +159,26 @@
 				76109732170F357B005176A7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		761097E4170F508F005176A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				761097E1170F505D005176A7 /* DribbbleKitModel.xcdatamodeld */,
+				761097DE170F5048005176A7 /* DKPlayers.h */,
+				761097DF170F5048005176A7 /* DKPlayers.m */,
+				761097DB170F5048005176A7 /* DKPlayer.h */,
+				761097DC170F5048005176A7 /* DKPlayer.m */,
+				761097D8170F5048005176A7 /* DKComments.h */,
+				761097D9170F5048005176A7 /* DKComments.m */,
+				761097D5170F5047005176A7 /* DKShot.h */,
+				761097D6170F5047005176A7 /* DKShot.m */,
+				761097D2170F5047005176A7 /* DKShots.h */,
+				761097D3170F5047005176A7 /* DKShots.m */,
+				761097CF170F5046005176A7 /* DKComment.h */,
+				761097D0170F5046005176A7 /* DKComment.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76109720170F357A005176A7 /* DribbbleKit.m in Sources */,
+				761097D1170F5046005176A7 /* DKComment.m in Sources */,
+				761097D4170F5047005176A7 /* DKShots.m in Sources */,
+				761097D7170F5048005176A7 /* DKShot.m in Sources */,
+				761097DA170F5048005176A7 /* DKComments.m in Sources */,
+				761097DD170F5048005176A7 /* DKPlayer.m in Sources */,
+				761097E0170F5048005176A7 /* DKPlayers.m in Sources */,
+				761097E3170F505D005176A7 /* DribbbleKitModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +443,7 @@
 				7610973C170F357B005176A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7610973D170F357B005176A7 /* Build configuration list for PBXNativeTarget "DribbbleKitTests" */ = {
 			isa = XCConfigurationList;
@@ -409,8 +452,23 @@
 				7610973F170F357B005176A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		761097E1170F505D005176A7 /* DribbbleKitModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				761097E2170F505D005176A7 /* DribbbleKitModel.xcdatamodel */,
+			);
+			currentVersion = 761097E2170F505D005176A7 /* DribbbleKitModel.xcdatamodel */;
+			name = DribbbleKitModel.xcdatamodeld;
+			path = Model/DribbbleKitModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7610970D170F357A005176A7 /* Project object */;
 }

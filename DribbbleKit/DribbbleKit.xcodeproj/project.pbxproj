@@ -15,12 +15,25 @@
 		76109734170F357B005176A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76109732170F357B005176A7 /* InfoPlist.strings */; };
 		76109737170F357B005176A7 /* DribbbleKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109736170F357B005176A7 /* DribbbleKitTests.m */; };
 		761097E3170F505D005176A7 /* DribbbleKitModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 761097E1170F505D005176A7 /* DribbbleKitModel.xcdatamodeld */; };
-		761097E8170F582C005176A7 /* DKShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097E7170F582C005176A7 /* DKShot.m */; };
-		761097EB170F582D005176A7 /* DKShots.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097EA170F582D005176A7 /* DKShots.m */; };
-		761097EE170F582D005176A7 /* DKComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097ED170F582D005176A7 /* DKComments.m */; };
-		761097F1170F582D005176A7 /* DKPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097F0170F582D005176A7 /* DKPlayer.m */; };
-		761097F4170F582D005176A7 /* DKComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097F3170F582D005176A7 /* DKComment.m */; };
-		761097F7170F582D005176A7 /* DKPlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097F6170F582D005176A7 /* DKPlayers.m */; };
+		761097E8170F582C005176A7 /* DKShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097E7170F582C005176A7 /* DKShot.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		761097EB170F582D005176A7 /* DKShots.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097EA170F582D005176A7 /* DKShots.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		761097EE170F582D005176A7 /* DKComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097ED170F582D005176A7 /* DKComments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		761097F1170F582D005176A7 /* DKPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097F0170F582D005176A7 /* DKPlayer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		761097F4170F582D005176A7 /* DKComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097F3170F582D005176A7 /* DKComment.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		761097F7170F582D005176A7 /* DKPlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097F6170F582D005176A7 /* DKPlayers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		761097FB170F5B82005176A7 /* DKAPIEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 761097FA170F5B82005176A7 /* DKAPIEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		76109C43171052AA005176A7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109C42171052AA005176A7 /* CFNetwork.framework */; };
+		76109C45171052B0005176A7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109C44171052B0005176A7 /* CoreData.framework */; };
+		76109C47171052B8005176A7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109C46171052B8005176A7 /* Security.framework */; };
+		76109C4F17105A04005176A7 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109C3B17105252005176A7 /* libRestKit.a */; };
+		76109C6017106468005176A7 /* DribbbleKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 76109782170F3988005176A7 /* DribbbleKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76109C6117106489005176A7 /* DKShots.h in Headers */ = {isa = PBXBuildFile; fileRef = 761097E9170F582D005176A7 /* DKShots.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76109C6217106489005176A7 /* DKAPIEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 761097F9170F5B82005176A7 /* DKAPIEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76109C6317106489005176A7 /* DKPlayers.h in Headers */ = {isa = PBXBuildFile; fileRef = 761097F5170F582D005176A7 /* DKPlayers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76109C6417106489005176A7 /* DKComment.h in Headers */ = {isa = PBXBuildFile; fileRef = 761097F2170F582D005176A7 /* DKComment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76109C6517106489005176A7 /* DKPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 761097EF170F582D005176A7 /* DKPlayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76109C6617106489005176A7 /* DKComments.h in Headers */ = {isa = PBXBuildFile; fileRef = 761097EC170F582D005176A7 /* DKComments.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76109C67171064E1005176A7 /* DKShot.h in Headers */ = {isa = PBXBuildFile; fileRef = 761097E6170F582C005176A7 /* DKShot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,19 +44,42 @@
 			remoteGlobalIDString = 76109714170F357A005176A7;
 			remoteInfo = DribbbleKit;
 		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		76109713170F357A005176A7 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
+		76109C3A17105252005176A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76109C3317105251005176A7 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
 		};
-/* End PBXCopyFilesBuildPhase section */
+		76109C3C17105252005176A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76109C3317105251005176A7 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		76109C3E17105252005176A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76109C3317105251005176A7 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		76109C4017105252005176A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76109C3317105251005176A7 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		76109C4A171052D8005176A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76109C3317105251005176A7 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		76109715170F357A005176A7 /* libDribbbleKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDribbbleKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +106,14 @@
 		761097F3170F582D005176A7 /* DKComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKComment.m; path = Model/DKComment.m; sourceTree = "<group>"; };
 		761097F5170F582D005176A7 /* DKPlayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKPlayers.h; path = Model/DKPlayers.h; sourceTree = "<group>"; };
 		761097F6170F582D005176A7 /* DKPlayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKPlayers.m; path = Model/DKPlayers.m; sourceTree = "<group>"; };
+		761097F9170F5B82005176A7 /* DKAPIEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAPIEngine.h; sourceTree = "<group>"; };
+		761097FA170F5B82005176A7 /* DKAPIEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAPIEngine.m; sourceTree = "<group>"; };
+		76109C3317105251005176A7 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../Vendor/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		76109C42171052AA005176A7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		76109C44171052B0005176A7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		76109C46171052B8005176A7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		76109C48171052BE005176A7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		76109C4C171052FD005176A7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +121,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76109C4F17105A04005176A7 /* libRestKit.a in Frameworks */,
+				76109C43171052AA005176A7 /* CFNetwork.framework in Frameworks */,
+				76109C47171052B8005176A7 /* Security.framework in Frameworks */,
+				76109C45171052B0005176A7 /* CoreData.framework in Frameworks */,
 				76109719170F357A005176A7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,6 +146,7 @@
 		7610970C170F357A005176A7 = {
 			isa = PBXGroup;
 			children = (
+				76109B0717104D59005176A7 /* Vendor */,
 				7610971A170F357A005176A7 /* DribbbleKit */,
 				7610972F170F357B005176A7 /* DribbbleKitTests */,
 				76109717170F357A005176A7 /* Frameworks */,
@@ -117,6 +166,11 @@
 		76109717170F357A005176A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76109C4C171052FD005176A7 /* SystemConfiguration.framework */,
+				76109C48171052BE005176A7 /* MobileCoreServices.framework */,
+				76109C46171052B8005176A7 /* Security.framework */,
+				76109C44171052B0005176A7 /* CoreData.framework */,
+				76109C42171052AA005176A7 /* CFNetwork.framework */,
 				76109718170F357A005176A7 /* Foundation.framework */,
 				76109727170F357B005176A7 /* SenTestingKit.framework */,
 				76109729170F357B005176A7 /* UIKit.framework */,
@@ -128,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				76109782170F3988005176A7 /* DribbbleKit.h */,
+				761097F8170F5B3F005176A7 /* API */,
 				761097E4170F508F005176A7 /* Model */,
 				7610971B170F357A005176A7 /* Supporting Files */,
 			);
@@ -164,24 +219,70 @@
 		761097E4170F508F005176A7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				761097E1170F505D005176A7 /* DribbbleKitModel.xcdatamodeld */,
-				761097F5170F582D005176A7 /* DKPlayers.h */,
-				761097F6170F582D005176A7 /* DKPlayers.m */,
 				761097F2170F582D005176A7 /* DKComment.h */,
 				761097F3170F582D005176A7 /* DKComment.m */,
-				761097EF170F582D005176A7 /* DKPlayer.h */,
-				761097F0170F582D005176A7 /* DKPlayer.m */,
 				761097EC170F582D005176A7 /* DKComments.h */,
 				761097ED170F582D005176A7 /* DKComments.m */,
-				761097E9170F582D005176A7 /* DKShots.h */,
-				761097EA170F582D005176A7 /* DKShots.m */,
+				761097EF170F582D005176A7 /* DKPlayer.h */,
+				761097F0170F582D005176A7 /* DKPlayer.m */,
+				761097F5170F582D005176A7 /* DKPlayers.h */,
+				761097F6170F582D005176A7 /* DKPlayers.m */,
 				761097E6170F582C005176A7 /* DKShot.h */,
 				761097E7170F582C005176A7 /* DKShot.m */,
+				761097E9170F582D005176A7 /* DKShots.h */,
+				761097EA170F582D005176A7 /* DKShots.m */,
+				761097E1170F505D005176A7 /* DribbbleKitModel.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
+		761097F8170F5B3F005176A7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				761097F9170F5B82005176A7 /* DKAPIEngine.h */,
+				761097FA170F5B82005176A7 /* DKAPIEngine.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		76109B0717104D59005176A7 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				76109C3317105251005176A7 /* RestKit.xcodeproj */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		76109C3417105251005176A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76109C3B17105252005176A7 /* libRestKit.a */,
+				76109C3D17105252005176A7 /* RestKitTests.octest */,
+				76109C3F17105252005176A7 /* RestKit.framework */,
+				76109C4117105252005176A7 /* RestKitFrameworkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		76109C5F17106458005176A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76109C6017106468005176A7 /* DribbbleKit.h in Headers */,
+				76109C6117106489005176A7 /* DKShots.h in Headers */,
+				76109C6217106489005176A7 /* DKAPIEngine.h in Headers */,
+				76109C6317106489005176A7 /* DKPlayers.h in Headers */,
+				76109C6417106489005176A7 /* DKComment.h in Headers */,
+				76109C6517106489005176A7 /* DKPlayer.h in Headers */,
+				76109C6617106489005176A7 /* DKComments.h in Headers */,
+				76109C67171064E1005176A7 /* DKShot.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		76109714170F357A005176A7 /* DribbbleKit */ = {
@@ -190,11 +291,12 @@
 			buildPhases = (
 				76109711170F357A005176A7 /* Sources */,
 				76109712170F357A005176A7 /* Frameworks */,
-				76109713170F357A005176A7 /* CopyFiles */,
+				76109C5F17106458005176A7 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				76109C4B171052D8005176A7 /* PBXTargetDependency */,
 			);
 			name = DribbbleKit;
 			productName = DribbbleKit;
@@ -239,6 +341,12 @@
 			mainGroup = 7610970C170F357A005176A7;
 			productRefGroup = 76109716170F357A005176A7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 76109C3417105251005176A7 /* Products */;
+					ProjectRef = 76109C3317105251005176A7 /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				76109714170F357A005176A7 /* DribbbleKit */,
@@ -246,6 +354,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		76109C3B17105252005176A7 /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = 76109C3A17105252005176A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76109C3D17105252005176A7 /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = 76109C3C17105252005176A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76109C3F17105252005176A7 /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = 76109C3E17105252005176A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		76109C4117105252005176A7 /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = 76109C4017105252005176A7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		76109723170F357B005176A7 /* Resources */ = {
@@ -286,6 +425,7 @@
 				761097F1170F582D005176A7 /* DKPlayer.m in Sources */,
 				761097F4170F582D005176A7 /* DKComment.m in Sources */,
 				761097F7170F582D005176A7 /* DKPlayers.m in Sources */,
+				761097FB170F5B82005176A7 /* DKAPIEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +444,11 @@
 			isa = PBXTargetDependency;
 			target = 76109714170F357A005176A7 /* DribbbleKit */;
 			targetProxy = 7610972C170F357B005176A7 /* PBXContainerItemProxy */;
+		};
+		76109C4B171052D8005176A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = 76109C4A171052D8005176A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -342,8 +487,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -364,7 +514,12 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				HEADER_SEARCH_PATHS = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -376,9 +531,15 @@
 				DSTROOT = /tmp/DribbbleKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DribbbleKit/DribbbleKit-Prefix.pch";
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../../Headers";
+				OBJROOT = "$(SRCROOT)/Build";
 				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = "../../Headers/$(TARGET_NAME)/Private";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "../../Headers/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SYMROOT = "$(SRCROOT)/Build/Products";
 			};
 			name = Debug;
 		};
@@ -388,9 +549,15 @@
 				DSTROOT = /tmp/DribbbleKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DribbbleKit/DribbbleKit-Prefix.pch";
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../../Headers";
+				OBJROOT = "$(SRCROOT)/Build";
 				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = "../../Headers/$(TARGET_NAME)/Private";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "../../Headers/$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SYMROOT = "$(SRCROOT)/Build/Products";
 			};
 			name = Release;
 		};

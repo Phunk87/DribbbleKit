@@ -19,26 +19,31 @@
 		76109766170F35BA005176A7 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76109764170F35BA005176A7 /* MainStoryboard_iPhone.storyboard */; };
 		76109769170F35BB005176A7 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76109767170F35BB005176A7 /* MainStoryboard_iPad.storyboard */; };
 		7610976C170F35BB005176A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7610976B170F35BB005176A7 /* ViewController.m */; };
+		76109B0017104AB5005176A7 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109AFF17104AB5005176A7 /* MobileCoreServices.framework */; };
+		76109C5217105A66005176A7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109C5117105A66005176A7 /* SystemConfiguration.framework */; };
+		76109C5517105B27005176A7 /* libDribbbleKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109AF617104981005176A7 /* libDribbbleKit.a */; };
+		76109C6817106578005176A7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109AFB17104AA7005176A7 /* CoreData.framework */; };
+		76109C6A17106585005176A7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109AF917104AA0005176A7 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		76109777170F3632005176A7 /* PBXContainerItemProxy */ = {
+		76109AF517104981005176A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 76109772170F3632005176A7 /* DribbbleKit.xcodeproj */;
+			containerPortal = 76109AF017104980005176A7 /* DribbbleKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 76109715170F357A005176A7;
 			remoteInfo = DribbbleKit;
 		};
-		76109779170F3632005176A7 /* PBXContainerItemProxy */ = {
+		76109AF717104981005176A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 76109772170F3632005176A7 /* DribbbleKit.xcodeproj */;
+			containerPortal = 76109AF017104980005176A7 /* DribbbleKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 76109726170F357B005176A7;
 			remoteInfo = DribbbleKitTests;
 		};
-		7610977F170F38AA005176A7 /* PBXContainerItemProxy */ = {
+		76109B0117104B37005176A7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 76109772170F3632005176A7 /* DribbbleKit.xcodeproj */;
+			containerPortal = 76109AF017104980005176A7 /* DribbbleKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 76109714170F357A005176A7;
 			remoteInfo = DribbbleKit;
@@ -63,7 +68,12 @@
 		76109768170F35BB005176A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		7610976A170F35BB005176A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7610976B170F35BB005176A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		76109772170F3632005176A7 /* DribbbleKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DribbbleKit.xcodeproj; path = ../DribbbleKit/DribbbleKit.xcodeproj; sourceTree = "<group>"; };
+		76109AF017104980005176A7 /* DribbbleKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DribbbleKit.xcodeproj; path = ../DribbbleKit/DribbbleKit.xcodeproj; sourceTree = "<group>"; };
+		76109AF917104AA0005176A7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		76109AFB17104AA7005176A7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		76109AFD17104AAD005176A7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		76109AFF17104AB5005176A7 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		76109C5117105A66005176A7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76109C6A17106585005176A7 /* CFNetwork.framework in Frameworks */,
+				76109C6817106578005176A7 /* CoreData.framework in Frameworks */,
+				76109C5517105B27005176A7 /* libDribbbleKit.a in Frameworks */,
+				76109C5217105A66005176A7 /* SystemConfiguration.framework in Frameworks */,
+				76109B0017104AB5005176A7 /* MobileCoreServices.framework in Frameworks */,
 				7610974D170F35BA005176A7 /* UIKit.framework in Frameworks */,
 				7610974F170F35BA005176A7 /* Foundation.framework in Frameworks */,
 				76109751170F35BA005176A7 /* CoreGraphics.framework in Frameworks */,
@@ -83,7 +98,7 @@
 		76109740170F35BA005176A7 = {
 			isa = PBXGroup;
 			children = (
-				76109772170F3632005176A7 /* DribbbleKit.xcodeproj */,
+				76109AF017104980005176A7 /* DribbbleKit.xcodeproj */,
 				76109752170F35BA005176A7 /* Demo */,
 				7610974B170F35BA005176A7 /* Frameworks */,
 				7610974A170F35BA005176A7 /* Products */,
@@ -101,6 +116,11 @@
 		7610974B170F35BA005176A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76109C5117105A66005176A7 /* SystemConfiguration.framework */,
+				76109AFF17104AB5005176A7 /* MobileCoreServices.framework */,
+				76109AFD17104AAD005176A7 /* Security.framework */,
+				76109AFB17104AA7005176A7 /* CoreData.framework */,
+				76109AF917104AA0005176A7 /* CFNetwork.framework */,
 				7610974C170F35BA005176A7 /* UIKit.framework */,
 				7610974E170F35BA005176A7 /* Foundation.framework */,
 				76109750170F35BA005176A7 /* CoreGraphics.framework */,
@@ -136,11 +156,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		76109773170F3632005176A7 /* Products */ = {
+		76109AF117104980005176A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				76109778170F3632005176A7 /* libDribbbleKit.a */,
-				7610977A170F3632005176A7 /* DribbbleKitTests.octest */,
+				76109AF617104981005176A7 /* libDribbbleKit.a */,
+				76109AF817104981005176A7 /* DribbbleKitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,7 +179,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				76109780170F38AA005176A7 /* PBXTargetDependency */,
+				76109B0217104B37005176A7 /* PBXTargetDependency */,
 			);
 			name = Demo;
 			productName = Demo;
@@ -187,8 +207,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 76109773170F3632005176A7 /* Products */;
-					ProjectRef = 76109772170F3632005176A7 /* DribbbleKit.xcodeproj */;
+					ProductGroup = 76109AF117104980005176A7 /* Products */;
+					ProjectRef = 76109AF017104980005176A7 /* DribbbleKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -199,18 +219,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		76109778170F3632005176A7 /* libDribbbleKit.a */ = {
+		76109AF617104981005176A7 /* libDribbbleKit.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libDribbbleKit.a;
-			remoteRef = 76109777170F3632005176A7 /* PBXContainerItemProxy */;
+			remoteRef = 76109AF517104981005176A7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		7610977A170F3632005176A7 /* DribbbleKitTests.octest */ = {
+		76109AF817104981005176A7 /* DribbbleKitTests.octest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = DribbbleKitTests.octest;
-			remoteRef = 76109779170F3632005176A7 /* PBXContainerItemProxy */;
+			remoteRef = 76109AF717104981005176A7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -245,10 +265,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		76109780170F38AA005176A7 /* PBXTargetDependency */ = {
+		76109B0217104B37005176A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = DribbbleKit;
-			targetProxy = 7610977F170F38AA005176A7 /* PBXContainerItemProxy */;
+			targetProxy = 76109B0117104B37005176A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -341,7 +361,13 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../../Headers";
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/DribbbleKit-aqfuurazbmzzauarqsouebintnpx/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -352,7 +378,13 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demo/Demo-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/../../Headers";
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/DribbbleKit-aqfuurazbmzzauarqsouebintnpx/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DKComment" representedClassName="DKComment" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commentID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="likesCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="comments" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DKComments" inverseName="comments" inverseEntity="DKComments" syncable="YES"/>
+        <relationship name="player" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DKPlayer" inverseName="comment" inverseEntity="DKPlayer" syncable="YES"/>
+    </entity>
+    <entity name="DKComments" representedClassName="DKComments" syncable="YES">
+        <attribute name="page" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="pages" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="pageSize" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="total" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="DKComment" inverseName="comments" inverseEntity="DKComment" syncable="YES"/>
+    </entity>
+    <entity name="DKPlayer" representedClassName="DKPlayer" syncable="YES">
+        <attribute name="avatarURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commentsCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="commentsReceivedCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="draftedByPlayerID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="drafteesCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="followersCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="followingCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="likesCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="likesReceivedCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="playerID" attributeType="String" syncable="YES"/>
+        <attribute name="reboundsCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="shotsCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="twitterScreenName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comment" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DKComment" inverseName="player" inverseEntity="DKComment" syncable="YES"/>
+        <relationship name="players" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DKPlayers" inverseName="palyers" inverseEntity="DKPlayers" syncable="YES"/>
+        <relationship name="shot" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DKShot" inverseName="player" inverseEntity="DKShot" syncable="YES"/>
+    </entity>
+    <entity name="DKPlayers" representedClassName="DKPlayers" syncable="YES">
+        <attribute name="page" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="pages" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="pageSize" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="total" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="palyers" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="DKPlayer" inverseName="players" inverseEntity="DKPlayer" syncable="YES"/>
+    </entity>
+    <entity name="DKShot" representedClassName="DKShot" syncable="YES">
+        <attribute name="commentsCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="imageTeaserURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="likesCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="reboundsCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="reboundSourceID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="shortURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shotID" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="viewsCount" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="player" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DKPlayer" inverseName="shot" inverseEntity="DKPlayer" syncable="YES"/>
+        <relationship name="shots" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="DKShots" inverseName="shots" inverseEntity="DKShots" syncable="YES"/>
+    </entity>
+    <entity name="DKShots" representedClassName="DKShots" syncable="YES">
+        <attribute name="page" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="pages" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="pageSize" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="total" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="shots" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="DKShot" inverseName="shots" inverseEntity="DKShot" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DKComment" positionX="459" positionY="630" width="128" height="135"/>
+        <element name="DKComments" positionX="432" positionY="459" width="128" height="120"/>
+        <element name="DKPlayer" positionX="106" positionY="432" width="128" height="360"/>
+        <element name="DKPlayers" positionX="90" positionY="216" width="128" height="120"/>
+        <element name="DKShot" positionX="-216" positionY="522" width="128" height="285"/>
+        <element name="DKShots" positionX="-234" positionY="342" width="128" height="120"/>
+    </elements>
+</model>

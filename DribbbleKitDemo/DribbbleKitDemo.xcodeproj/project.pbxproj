@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76109D0C1711B832005176A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109D0B1711B832005176A7 /* UIKit.framework */; };
+		76109D0E1711B832005176A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109D0D1711B832005176A7 /* Foundation.framework */; };
+		76109D101711B832005176A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109D0F1711B832005176A7 /* CoreGraphics.framework */; };
+		76109D161711B832005176A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76109D141711B832005176A7 /* InfoPlist.strings */; };
+		76109D181711B832005176A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D171711B832005176A7 /* main.m */; };
+		76109D1C1711B832005176A7 /* DKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D1B1711B832005176A7 /* DKAppDelegate.m */; };
+		76109D1E1711B832005176A7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 76109D1D1711B832005176A7 /* Default.png */; };
+		76109D201711B832005176A7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76109D1F1711B832005176A7 /* Default@2x.png */; };
+		76109D221711B832005176A7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76109D211711B832005176A7 /* Default-568h@2x.png */; };
+		76109D251711B832005176A7 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76109D231711B832005176A7 /* MainStoryboard_iPhone.storyboard */; };
+		76109D281711B833005176A7 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76109D261711B833005176A7 /* MainStoryboard_iPad.storyboard */; };
+		76109D2B1711B833005176A7 /* DKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D2A1711B833005176A7 /* DKViewController.m */; };
+		76109D461711B854005176A7 /* DKAPIEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D341711B854005176A7 /* DKAPIEngine.m */; };
+		76109D471711B854005176A7 /* DKComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D381711B854005176A7 /* DKComment.m */; };
+		76109D481711B854005176A7 /* DKComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D3A1711B854005176A7 /* DKComments.m */; };
+		76109D491711B854005176A7 /* DKPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D3D1711B854005176A7 /* DKPlayer.m */; };
+		76109D4A1711B854005176A7 /* DKPlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D3F1711B854005176A7 /* DKPlayers.m */; };
+		76109D4B1711B854005176A7 /* DKShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D411711B854005176A7 /* DKShot.m */; };
+		76109D4C1711B854005176A7 /* DKShots.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D431711B854005176A7 /* DKShots.m */; };
+		76109D4D1711B854005176A7 /* DribbbleKitModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76109D441711B854005176A7 /* DribbbleKitModel.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		76109D081711B832005176A7 /* DribbbleKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DribbbleKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76109D0B1711B832005176A7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		76109D0D1711B832005176A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		76109D0F1711B832005176A7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		76109D131711B832005176A7 /* DribbbleKitDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DribbbleKitDemo-Info.plist"; sourceTree = "<group>"; };
+		76109D151711B832005176A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		76109D171711B832005176A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		76109D191711B832005176A7 /* DribbbleKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DribbbleKitDemo-Prefix.pch"; sourceTree = "<group>"; };
+		76109D1A1711B832005176A7 /* DKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKAppDelegate.h; sourceTree = "<group>"; };
+		76109D1B1711B832005176A7 /* DKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKAppDelegate.m; sourceTree = "<group>"; };
+		76109D1D1711B832005176A7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		76109D1F1711B832005176A7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		76109D211711B832005176A7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		76109D241711B832005176A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		76109D271711B833005176A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		76109D291711B833005176A7 /* DKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKViewController.h; sourceTree = "<group>"; };
+		76109D2A1711B833005176A7 /* DKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKViewController.m; sourceTree = "<group>"; };
+		76109D331711B854005176A7 /* DKAPIEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAPIEngine.h; sourceTree = "<group>"; };
+		76109D341711B854005176A7 /* DKAPIEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAPIEngine.m; sourceTree = "<group>"; };
+		76109D351711B854005176A7 /* DribbbleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DribbbleKit.h; sourceTree = "<group>"; };
+		76109D381711B854005176A7 /* DKComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKComment.m; sourceTree = "<group>"; };
+		76109D391711B854005176A7 /* DKComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKComments.h; sourceTree = "<group>"; };
+		76109D3A1711B854005176A7 /* DKComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKComments.m; sourceTree = "<group>"; };
+		76109D3B1711B854005176A7 /* DKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKModel.h; sourceTree = "<group>"; };
+		76109D3C1711B854005176A7 /* DKPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPlayer.h; sourceTree = "<group>"; };
+		76109D3D1711B854005176A7 /* DKPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPlayer.m; sourceTree = "<group>"; };
+		76109D3E1711B854005176A7 /* DKPlayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPlayers.h; sourceTree = "<group>"; };
+		76109D3F1711B854005176A7 /* DKPlayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPlayers.m; sourceTree = "<group>"; };
+		76109D401711B854005176A7 /* DKShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKShot.h; sourceTree = "<group>"; };
+		76109D411711B854005176A7 /* DKShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKShot.m; sourceTree = "<group>"; };
+		76109D421711B854005176A7 /* DKShots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKShots.h; sourceTree = "<group>"; };
+		76109D431711B854005176A7 /* DKShots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKShots.m; sourceTree = "<group>"; };
+		76109D451711B854005176A7 /* DribbbleKitModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DribbbleKitModel.xcdatamodel; sourceTree = "<group>"; };
+		76109D4F1711B8A9005176A7 /* DKComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKComment.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76109D051711B832005176A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76109D0C1711B832005176A7 /* UIKit.framework in Frameworks */,
+				76109D0E1711B832005176A7 /* Foundation.framework in Frameworks */,
+				76109D101711B832005176A7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76109CFF1711B832005176A7 = {
+			isa = PBXGroup;
+			children = (
+				76109D311711B854005176A7 /* DribbbleKit */,
+				76109D111711B832005176A7 /* DribbbleKitDemo */,
+				76109D0A1711B832005176A7 /* Frameworks */,
+				76109D091711B832005176A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76109D091711B832005176A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76109D081711B832005176A7 /* DribbbleKitDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76109D0A1711B832005176A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76109D0B1711B832005176A7 /* UIKit.framework */,
+				76109D0D1711B832005176A7 /* Foundation.framework */,
+				76109D0F1711B832005176A7 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76109D111711B832005176A7 /* DribbbleKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				76109D1A1711B832005176A7 /* DKAppDelegate.h */,
+				76109D1B1711B832005176A7 /* DKAppDelegate.m */,
+				76109D231711B832005176A7 /* MainStoryboard_iPhone.storyboard */,
+				76109D261711B833005176A7 /* MainStoryboard_iPad.storyboard */,
+				76109D291711B833005176A7 /* DKViewController.h */,
+				76109D2A1711B833005176A7 /* DKViewController.m */,
+				76109D121711B832005176A7 /* Supporting Files */,
+			);
+			path = DribbbleKitDemo;
+			sourceTree = "<group>";
+		};
+		76109D121711B832005176A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76109D131711B832005176A7 /* DribbbleKitDemo-Info.plist */,
+				76109D141711B832005176A7 /* InfoPlist.strings */,
+				76109D171711B832005176A7 /* main.m */,
+				76109D191711B832005176A7 /* DribbbleKitDemo-Prefix.pch */,
+				76109D1D1711B832005176A7 /* Default.png */,
+				76109D1F1711B832005176A7 /* Default@2x.png */,
+				76109D211711B832005176A7 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76109D311711B854005176A7 /* DribbbleKit */ = {
+			isa = PBXGroup;
+			children = (
+				76109D4E1711B897005176A7 /* Vendor */,
+				76109D321711B854005176A7 /* API */,
+				76109D351711B854005176A7 /* DribbbleKit.h */,
+				76109D361711B854005176A7 /* Model */,
+			);
+			name = DribbbleKit;
+			path = ../DribbbleKit;
+			sourceTree = "<group>";
+		};
+		76109D321711B854005176A7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				76109D331711B854005176A7 /* DKAPIEngine.h */,
+				76109D341711B854005176A7 /* DKAPIEngine.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		76109D361711B854005176A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				76109D4F1711B8A9005176A7 /* DKComment.h */,
+				76109D381711B854005176A7 /* DKComment.m */,
+				76109D391711B854005176A7 /* DKComments.h */,
+				76109D3A1711B854005176A7 /* DKComments.m */,
+				76109D3B1711B854005176A7 /* DKModel.h */,
+				76109D3C1711B854005176A7 /* DKPlayer.h */,
+				76109D3D1711B854005176A7 /* DKPlayer.m */,
+				76109D3E1711B854005176A7 /* DKPlayers.h */,
+				76109D3F1711B854005176A7 /* DKPlayers.m */,
+				76109D401711B854005176A7 /* DKShot.h */,
+				76109D411711B854005176A7 /* DKShot.m */,
+				76109D421711B854005176A7 /* DKShots.h */,
+				76109D431711B854005176A7 /* DKShots.m */,
+				76109D441711B854005176A7 /* DribbbleKitModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		76109D4E1711B897005176A7 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76109D071711B832005176A7 /* DribbbleKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76109D2E1711B833005176A7 /* Build configuration list for PBXNativeTarget "DribbbleKitDemo" */;
+			buildPhases = (
+				76109D041711B832005176A7 /* Sources */,
+				76109D051711B832005176A7 /* Frameworks */,
+				76109D061711B832005176A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DribbbleKitDemo;
+			productName = DribbbleKitDemo;
+			productReference = 76109D081711B832005176A7 /* DribbbleKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76109D001711B832005176A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DK;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = All4Love;
+			};
+			buildConfigurationList = 76109D031711B832005176A7 /* Build configuration list for PBXProject "DribbbleKitDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 76109CFF1711B832005176A7;
+			productRefGroup = 76109D091711B832005176A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76109D071711B832005176A7 /* DribbbleKitDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76109D061711B832005176A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76109D161711B832005176A7 /* InfoPlist.strings in Resources */,
+				76109D1E1711B832005176A7 /* Default.png in Resources */,
+				76109D201711B832005176A7 /* Default@2x.png in Resources */,
+				76109D221711B832005176A7 /* Default-568h@2x.png in Resources */,
+				76109D251711B832005176A7 /* MainStoryboard_iPhone.storyboard in Resources */,
+				76109D281711B833005176A7 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76109D041711B832005176A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76109D181711B832005176A7 /* main.m in Sources */,
+				76109D1C1711B832005176A7 /* DKAppDelegate.m in Sources */,
+				76109D2B1711B833005176A7 /* DKViewController.m in Sources */,
+				76109D461711B854005176A7 /* DKAPIEngine.m in Sources */,
+				76109D471711B854005176A7 /* DKComment.m in Sources */,
+				76109D481711B854005176A7 /* DKComments.m in Sources */,
+				76109D491711B854005176A7 /* DKPlayer.m in Sources */,
+				76109D4A1711B854005176A7 /* DKPlayers.m in Sources */,
+				76109D4B1711B854005176A7 /* DKShot.m in Sources */,
+				76109D4C1711B854005176A7 /* DKShots.m in Sources */,
+				76109D4D1711B854005176A7 /* DribbbleKitModel.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		76109D141711B832005176A7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76109D151711B832005176A7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		76109D231711B832005176A7 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76109D241711B832005176A7 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		76109D261711B833005176A7 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76109D271711B833005176A7 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76109D2C1711B833005176A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		76109D2D1711B833005176A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76109D2F1711B833005176A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DribbbleKitDemo/DribbbleKitDemo-Prefix.pch";
+				INFOPLIST_FILE = "DribbbleKitDemo/DribbbleKitDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		76109D301711B833005176A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DribbbleKitDemo/DribbbleKitDemo-Prefix.pch";
+				INFOPLIST_FILE = "DribbbleKitDemo/DribbbleKitDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76109D031711B832005176A7 /* Build configuration list for PBXProject "DribbbleKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76109D2C1711B833005176A7 /* Debug */,
+				76109D2D1711B833005176A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76109D2E1711B833005176A7 /* Build configuration list for PBXNativeTarget "DribbbleKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76109D2F1711B833005176A7 /* Debug */,
+				76109D301711B833005176A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		76109D441711B854005176A7 /* DribbbleKitModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				76109D451711B854005176A7 /* DribbbleKitModel.xcdatamodel */,
+			);
+			currentVersion = 76109D451711B854005176A7 /* DribbbleKitModel.xcdatamodel */;
+			path = DribbbleKitModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 76109D001711B832005176A7 /* Project object */;
+}

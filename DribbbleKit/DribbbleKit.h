@@ -10,12 +10,7 @@
 #define DribbbleKit_DribbbleKit_h
 
 // Model
-#import "DKPlayer.h"
-#import "DKPlayers.h"
-#import "DKComment.h"
-#import "DKComments.h"
-#import "DKShot.h"
-#import "DKShots.h"
+#import "DKModel.h"
 
 // API
 #import "DKAPIEngine.h"

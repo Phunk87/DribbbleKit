@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'Demo' target in the 'Demo' project
+// Prefix header for all source files of the 'DribbbleKitDemo' target in the 'DribbbleKitDemo' project
 //
 
 #import <Availability.h>

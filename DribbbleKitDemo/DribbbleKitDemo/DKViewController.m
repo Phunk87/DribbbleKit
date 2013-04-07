@@ -1,18 +1,18 @@
 //
-//  ViewController.m
-//  Demo
+//  DKViewController.m
+//  DribbbleKitDemo
 //
-//  Created by 0day on 13-4-6.
+//  Created by 0day on 13-4-7.
 //  Copyright (c) 2013年 All4Love. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DKViewController.h"
 
-@interface ViewController ()
+@interface DKViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DKViewController
 
 - (void)viewDidLoad
 {

@@ -1,16 +1,14 @@
 //
-//  AppDelegate.m
-//  Demo
+//  DKAppDelegate.m
+//  DribbbleKitDemo
 //
-//  Created by 0day on 13-4-6.
+//  Created by 0day on 13-4-7.
 //  Copyright (c) 2013年 All4Love. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "DKAppDelegate.h"
 
-#import <DribbbleKit/DribbbleKit.h>
-
-@implementation AppDelegate
+@implementation DKAppDelegate
 
 - (void)dealloc
 {
@@ -20,8 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[DKAPIEngine sharedEngine] playerProfileDetailsWithPlayerID:@"misu"];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 							

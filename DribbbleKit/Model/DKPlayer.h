@@ -1,8 +1,8 @@
 //
 //  DKPlayer.h
-//  DribbbleKit
+//  DribbbleKitDemo
 //
-//  Created by 0day on 13-4-6.
+//  Created by 0day on 13-4-8.
 //  Copyright (c) 2013年 All4Love. All rights reserved.
 //
 
@@ -31,8 +31,9 @@
 @property (nonatomic, retain) NSString * twitterScreenName;
 @property (nonatomic, retain) NSString * url;
 @property (nonatomic, retain) NSString * userName;
-@property (nonatomic, retain) DKPlayers *players;
+@property (nonatomic, retain) NSNumber * reboundsReceivedCount;
 @property (nonatomic, retain) DKComment *comment;
+@property (nonatomic, retain) DKPlayers *players;
 @property (nonatomic, retain) DKShot *shot;
 
 @end

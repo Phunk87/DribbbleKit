@@ -14,10 +14,15 @@ typedef enum {
     kDKShotsTypePopular
 } DKShotsType;
 
+@class DKComment, DKComments, DKPlayer, DKPlayers, DKShot, DKShots;
+
 @interface DKAPIEngine : NSObject
 
 + (DKAPIEngine *)sharedEngine;
 
-- (void)playerProfileDetailsWithPlayerID:(NSString *)playerID;
+// players
+- (void)playerProfileDetailsWithPlayerID:(NSString *)playerID success:(void (^)(DKPlayer *))successHandler failure:(void (^)(NSError *))failureHandler;
+
+// shots
 
 @end

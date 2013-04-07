@@ -1,8 +1,8 @@
 //
 //  DKPlayer.m
-//  DribbbleKit
+//  DribbbleKitDemo
 //
-//  Created by 0day on 13-4-6.
+//  Created by 0day on 13-4-8.
 //  Copyright (c) 2013年 All4Love. All rights reserved.
 //
 
@@ -32,8 +32,9 @@
 @dynamic twitterScreenName;
 @dynamic url;
 @dynamic userName;
-@dynamic players;
+@dynamic reboundsReceivedCount;
 @dynamic comment;
+@dynamic players;
 @dynamic shot;
 
 @end

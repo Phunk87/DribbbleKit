@@ -11,12 +11,7 @@
 #import <RestKit/RestKit.h>
 
 // Model
-#import "DKPlayer.h"
-#import "DKPlayers.h"
-#import "DKComment.h"
-#import "DKComments.h"
-#import "DKShot.h"
-#import "DKShots.h"
+#import "DKModel.h"
 
 @interface DKAPIEngine ()
 @property (nonatomic, retain) RKObjectManager  *objectManager;
@@ -43,6 +38,9 @@
     if (self) {
         NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
         RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+        
+        [managedObjectStore createPersistentStoreCoordinator];
+        
         NSError *error = nil;
         BOOL success = RKEnsureDirectoryExistsAtPath(RKApplicationDataDirectory(), &error);
         if (! success) {
@@ -55,9 +53,12 @@
         }
         [managedObjectStore createManagedObjectContexts];
         
+        managedObjectStore.managedObjectCache = [[[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext] autorelease];
+        
         self.objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://api.dribbble.com"]];
         self.objectManager.managedObjectStore = managedObjectStore;
         
+        // build mapping
         [self _buildMapping];
     }
     
@@ -69,59 +70,36 @@
 }
 
 #pragma mark - Public
-- (void)playerProfileDetailsWithPlayerID:(NSString *)playerID {
-    DKPlayer *player = [[DKPlayer alloc] init];
-    [self.objectManager getObject:player
-                             path:[NSString stringWithFormat:@"/players/%@", playerID]
+- (void)playerProfileDetailsWithPlayerID:(NSString *)playerID success:(void (^)(DKPlayer *))successHandler failure:(void (^)(NSError *))failureHandler {
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"DKPlayer" inManagedObjectContext:self.objectManager.managedObjectStore.mainQueueManagedObjectContext];
+    DKPlayer *player = [[DKPlayer alloc] initWithEntity:description insertIntoManagedObjectContext:self.objectManager.managedObjectStore.mainQueueManagedObjectContext];
+    player.playerID = playerID;
+    
+    [self.objectManager getObject:nil
+                             path:@"/players/misu"
                        parameters:nil
-                          success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult){
-                              NSLog(@"Result:%@", mappingResult);
+                          success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+                              NSLog(@"!!! %@", result);
                           }
+
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
-                              NSLog(@"%@", error);
+                              NSLog(@"!!! %@", error);
+                              [self.objectManager.managedObjectStore.mainQueueManagedObjectContext rollback];
                           }];
 }
 
 #pragma mark - Private
 - (void)_buildMapping {
-    // DKPlayer
-    NSDictionary *playerMappingDictionary = @{
-                                              @"id": @"playerID",
-                                              @"name": @"name",
-                                              @"username": @"userName",
-                                              @"url": @"url",
-                                              @"avatar_url": @"avatarURL",
-                                              @"location": @"location",
-                                              @"twitter_screen_name": @"twitterScreenName",
-                                              @"drafted_by_player_id": @"draftedByPlayerID",
-                                              @"shots_count": @"shotsCount",
-                                              @"draftees_count": @"drafteesCount",
-                                              @"followers_count": @"followersCount",
-                                              @"following_count": @"followingCount",
-                                              @"comments_count": @"commentsCount",
-                                              @"comments_received_count": @"commentsReceivedCount",
-                                              @"likes_count": @"likesCount",
-                                              @"likes_received_count": @"likesReceivedCount",
-                                              @"rebounds_count": @"reboundsCount",
-                                              @"rebounds_received_count": @"reboundsReceivedCount",
-                                              @"created_at": @"creationDate" };
+    NSArray *modelClasses = @[[DKPlayer class]]; //, [DKPlayers class], [DKComment class], [DKComments class], [DKShot class], [DKShots class]];
+    RKManagedObjectStore *managedObjectStore = self.objectManager.managedObjectStore;
     
-    RKObjectMapping *playerObjectRequestMapping = [RKObjectMapping requestMapping];
-    [playerObjectRequestMapping addAttributeMappingsFromDictionary:playerMappingDictionary];
-    RKRequestDescriptor *playerObjectRequestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:playerObjectRequestMapping
-                                                                                         objectClass:[DKPlayer class]
-                                                                                         rootKeyPath:@"player"];
-    
-    NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
-    
-    RKObjectMapping *playerObjectResponseMapping = [RKObjectMapping mappingForClass:[DKPlayer class]];
-    [playerObjectResponseMapping addAttributeMappingsFromDictionary:playerMappingDictionary];
-    RKResponseDescriptor *playerObjectResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:playerObjectResponseMapping
-                                                                                     pathPattern:nil
-                                                                                         keyPath:@"player"
-                                                                                     statusCodes:statusCodes];
-    [self.objectManager addRequestDescriptor:playerObjectRequestDescriptor];
-    [self.objectManager addResponseDescriptor:playerObjectResponseDescriptor];
+    for (Class<DKObjectMappingProtocol> modelClass in modelClasses) {
+        RKRequestDescriptor *requestDescriptor = [modelClass objectRequestDesctiptor];
+        RKResponseDescriptor *responseDescriptor = [modelClass objectResponseDescriptorWithManagedObjectStore:managedObjectStore];
+        
+        [self.objectManager addRequestDescriptor:requestDescriptor];
+        [self.objectManager addResponseDescriptor:responseDescriptor];
+    }
 }
 
 @end

@@ -8,6 +8,8 @@
 
 #import "DKAppDelegate.h"
 
+#import "DribbbleKit.h"
+
 @implementation DKAppDelegate
 
 - (void)dealloc
@@ -19,6 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [[DKAPIEngine sharedEngine] playerProfileDetailsWithPlayerID:@"misu" success:nil failure:nil];
+    
     return YES;
 }
 							

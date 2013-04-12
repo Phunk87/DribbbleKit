@@ -1,14 +1,13 @@
 //
 //  DKShot.m
-//  DribbbleKit
+//  DribbbleKitDemo
 //
-//  Created by 0day on 13-4-6.
+//  Created by 0day on 13-4-13.
 //  Copyright (c) 2013年 All4Love. All rights reserved.
 //
 
 #import "DKShot.h"
 #import "DKPlayer.h"
-#import "DKShots.h"
 
 
 @implementation DKShot
@@ -28,6 +27,5 @@
 @dynamic viewsCount;
 @dynamic width;
 @dynamic player;
-@dynamic shots;
 
 @end

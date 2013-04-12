@@ -14,15 +14,19 @@ typedef enum {
     kDKShotsTypePopular
 } DKShotsType;
 
-@class DKComment, DKComments, DKPlayer, DKPlayers, DKShot, DKShots;
+@class DKComment, DKComments, DKPlayer, DKPlayers, DKShot, DKShots, DKCollection;
 
 @interface DKAPIEngine : NSObject
 
 + (DKAPIEngine *)sharedEngine;
 
 // players
-- (void)playerProfileDetailsWithPlayerID:(NSString *)playerID success:(void (^)(DKPlayer *))successHandler failure:(void (^)(NSError *))failureHandler;
+- (void)playerWithPlayerID:(NSString *)playerID success:(void (^)(DKPlayer *))successHandler failure:(void (^)(NSError *))failureHandler;
+- (void)followersWithPlayer:(DKPlayer *)player collectionInfo:(DKCollection *)collection success:(void (^)(DKPlayers *))successHandler failure:(void (^)(NSError *))failureHandler;
+- (void)followingPlayersWithPlayer:(DKPlayer *)player collectionInfo:(DKCollection *)collection success:(void (^)(DKPlayers *))successHandler failure:(void (^)(NSError *))failureHandler;
 
 // shots
+- (void)shotWithShotID:(NSString *)shotID success:(void (^)(DKShot *))successHandler failure:(void (^)(NSError *))failureHandler;
+- (void)shotsInResponseToShotWithShotID:(NSString *)shotID success:(void (^)(DKShots *))successHandler failure:(void (^)(NSError *))failureHandler;
 
 @end

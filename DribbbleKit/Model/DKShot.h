@@ -1,15 +1,15 @@
 //
 //  DKShot.h
-//  DribbbleKit
+//  DribbbleKitDemo
 //
-//  Created by 0day on 13-4-6.
+//  Created by 0day on 13-4-13.
 //  Copyright (c) 2013年 All4Love. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class DKPlayer, DKShots;
+@class DKPlayer;
 
 @interface DKShot : NSManagedObject
 
@@ -28,6 +28,5 @@
 @property (nonatomic, retain) NSNumber * viewsCount;
 @property (nonatomic, retain) NSNumber * width;
 @property (nonatomic, retain) DKPlayer *player;
-@property (nonatomic, retain) DKShots *shots;
 
 @end

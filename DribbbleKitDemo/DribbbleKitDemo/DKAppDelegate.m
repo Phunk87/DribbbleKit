@@ -21,7 +21,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [[DKAPIEngine sharedEngine] playerProfileDetailsWithPlayerID:@"misu" success:nil failure:nil];
+    [[DKAPIEngine sharedEngine] playerWithPlayerID:@"misu"
+                                           success:^(DKPlayer *player){
+                                               [[DKAPIEngine sharedEngine] followersWithPlayer:player
+                                                                                collectionInfo:nil
+                                                                                       success:nil
+                                                                                       failure:nil];
+                                               [[DKAPIEngine sharedEngine] followingPlayersWithPlayer:player
+                                                                                       collectionInfo:nil
+                                                                                              success:nil
+                                                                                              failure:nil];
+                                           }
+                                           failure:nil];
     
     return YES;
 }

@@ -8,6 +8,10 @@
 
 #import "DKPlayer+ObjectMapping.h"
 
+static RKRequestDescriptor *RequestDescriptor = nil;
+static RKResponseDescriptor *ResponseDescriptor = nil;
+static RKEntityMapping *EntityResponseMapping = nil;
+
 @implementation DKPlayer (ObjectMapping)
 
 + (NSDictionary *)objectMappingDictionary {
@@ -43,33 +47,44 @@
 }
 
 + (RKRequestDescriptor *)objectRequestDesctiptor {
-    RKObjectMapping *objectMapping = [self objectRequestMapping];
-    RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:objectMapping
-                                                                                   objectClass:[self class]
-                                                                                   rootKeyPath:nil];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        RKObjectMapping *objectMapping = [self objectRequestMapping];
+        RequestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:objectMapping
+                                                                  objectClass:[self class]
+                                                                  rootKeyPath:nil];
+    });
     
-    return requestDescriptor;
+    
+    return RequestDescriptor;
 }
 
 + (RKObjectMapping *)objectResponseMappingWithManagedObjectStore:(RKManagedObjectStore *)managedObjectStore {
-    RKEntityMapping *entityResponseMapping = [RKEntityMapping mappingForEntityForName:NSStringFromClass([self class])
-                                                                 inManagedObjectStore:managedObjectStore];
-    entityResponseMapping.identificationAttributes = @[@"playerID"];
-    [entityResponseMapping addAttributeMappingsFromDictionary:[self objectMappingDictionary]];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        EntityResponseMapping = [RKEntityMapping mappingForEntityForName:NSStringFromClass([self class])
+                                                    inManagedObjectStore:managedObjectStore];
+        EntityResponseMapping.identificationAttributes = @[@"playerID"];
+        [EntityResponseMapping addAttributeMappingsFromDictionary:[self objectMappingDictionary]];
+    });
     
-    return entityResponseMapping;
+    return EntityResponseMapping;
 }
 
 + (RKResponseDescriptor *)objectResponseDescriptorWithManagedObjectStore:(RKManagedObjectStore *)managedObjectStore {
-    NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
+        
+        RKEntityMapping *objectMapping = (RKEntityMapping *)[self objectResponseMappingWithManagedObjectStore:managedObjectStore];
+        ResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:objectMapping
+                                                                     pathPattern:nil
+                                                                         keyPath:nil
+                                                                     statusCodes:statusCodes];
+    });
     
-    RKEntityMapping *objectMapping = (RKEntityMapping *)[self objectResponseMappingWithManagedObjectStore:managedObjectStore];
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:objectMapping
-                                                                                       pathPattern:nil
-                                                                                           keyPath:nil
-                                                                                       statusCodes:statusCodes];
     
-    return responseDescriptor;
+    return ResponseDescriptor;
 }
 
 @end

@@ -20,10 +20,6 @@
 		76109D281711B833005176A7 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76109D261711B833005176A7 /* MainStoryboard_iPad.storyboard */; };
 		76109D2B1711B833005176A7 /* DKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D2A1711B833005176A7 /* DKViewController.m */; };
 		76109D461711B854005176A7 /* DKAPIEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D341711B854005176A7 /* DKAPIEngine.m */; };
-		76109D471711B854005176A7 /* DKComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D381711B854005176A7 /* DKComment.m */; };
-		76109D481711B854005176A7 /* DKComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D3A1711B854005176A7 /* DKComments.m */; };
-		76109D4B1711B854005176A7 /* DKShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D411711B854005176A7 /* DKShot.m */; };
-		76109D4C1711B854005176A7 /* DKShots.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D431711B854005176A7 /* DKShots.m */; };
 		76109D4D1711B854005176A7 /* DribbbleKitModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 76109D441711B854005176A7 /* DribbbleKitModel.xcdatamodeld */; };
 		76109D6F1711BF88005176A7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109D6E1711BF87005176A7 /* CFNetwork.framework */; };
 		76109D711711BF8F005176A7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109D701711BF8F005176A7 /* CoreData.framework */; };
@@ -33,14 +29,16 @@
 		76109D791711BFAB005176A7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109D781711BFAB005176A7 /* Security.framework */; };
 		76109D7B1711BFB4005176A7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109D7A1711BFB4005176A7 /* SystemConfiguration.framework */; };
 		76109D7E1711C31C005176A7 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76109D671711BE51005176A7 /* libRestKit.a */; };
-		76109D811711DF03005176A7 /* DKPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D801711DF03005176A7 /* DKPlayer.m */; };
 		76109D871711EE2C005176A7 /* DKPlayer+ObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D861711EE2C005176A7 /* DKPlayer+ObjectMapping.m */; };
 		76109D8C1711EF33005176A7 /* DKComment+ObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D8B1711EF33005176A7 /* DKComment+ObjectMapping.m */; };
-		76109D8F1711F039005176A7 /* DKComments+ObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D8E1711F038005176A7 /* DKComments+ObjectMapping.m */; };
-		76109D921711F133005176A7 /* DKPlayers+ObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D911711F132005176A7 /* DKPlayers+ObjectMapping.m */; };
-		76109D951711F202005176A7 /* DKPlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D941711F202005176A7 /* DKPlayers.m */; };
 		76109D981711F247005176A7 /* DKShot+ObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D971711F245005176A7 /* DKShot+ObjectMapping.m */; };
-		76109D9B1711F3D6005176A7 /* DKShots+ObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 76109D9A1711F3D5005176A7 /* DKShots+ObjectMapping.m */; };
+		76A150D3171873E400751C92 /* DKComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A150D2171873E400751C92 /* DKComment.m */; };
+		76A150D6171873E500751C92 /* DKPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A150D5171873E500751C92 /* DKPlayer.m */; };
+		76A150D9171873E500751C92 /* DKShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A150D8171873E500751C92 /* DKShot.m */; };
+		76A150E6171889DE00751C92 /* DKCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A150E5171889DE00751C92 /* DKCollection.m */; };
+		76A150E917188A1D00751C92 /* DKShots.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A150E817188A1C00751C92 /* DKShots.m */; };
+		76A150EC17188A6100751C92 /* DKPlayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A150EB17188A6000751C92 /* DKPlayers.m */; };
+		76A150EF17188AA000751C92 /* DKComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A150EE17188A9F00751C92 /* DKComments.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,16 +100,8 @@
 		76109D331711B854005176A7 /* DKAPIEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKAPIEngine.h; sourceTree = "<group>"; };
 		76109D341711B854005176A7 /* DKAPIEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKAPIEngine.m; sourceTree = "<group>"; };
 		76109D351711B854005176A7 /* DribbbleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DribbbleKit.h; sourceTree = "<group>"; };
-		76109D381711B854005176A7 /* DKComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKComment.m; sourceTree = "<group>"; };
-		76109D391711B854005176A7 /* DKComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKComments.h; sourceTree = "<group>"; };
-		76109D3A1711B854005176A7 /* DKComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKComments.m; sourceTree = "<group>"; };
 		76109D3B1711B854005176A7 /* DKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKModel.h; sourceTree = "<group>"; };
-		76109D401711B854005176A7 /* DKShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKShot.h; sourceTree = "<group>"; };
-		76109D411711B854005176A7 /* DKShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKShot.m; sourceTree = "<group>"; };
-		76109D421711B854005176A7 /* DKShots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKShots.h; sourceTree = "<group>"; };
-		76109D431711B854005176A7 /* DKShots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKShots.m; sourceTree = "<group>"; };
 		76109D451711B854005176A7 /* DribbbleKitModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DribbbleKitModel.xcdatamodel; sourceTree = "<group>"; };
-		76109D4F1711B8A9005176A7 /* DKComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKComment.h; sourceTree = "<group>"; };
 		76109D5F1711BE51005176A7 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Vendor/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		76109D6E1711BF87005176A7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		76109D701711BF8F005176A7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -120,23 +110,27 @@
 		76109D761711BFA5005176A7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		76109D781711BFAB005176A7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		76109D7A1711BFB4005176A7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		76109D7F1711DF02005176A7 /* DKPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPlayer.h; sourceTree = "<group>"; };
-		76109D801711DF03005176A7 /* DKPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPlayer.m; sourceTree = "<group>"; };
 		76109D851711EE2C005176A7 /* DKPlayer+ObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPlayer+ObjectMapping.h"; sourceTree = "<group>"; };
 		76109D861711EE2C005176A7 /* DKPlayer+ObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPlayer+ObjectMapping.m"; sourceTree = "<group>"; };
 		76109D881711EE7C005176A7 /* DKObjectMappingProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKObjectMappingProtocol.h; sourceTree = "<group>"; };
 		76109D8A1711EF32005176A7 /* DKComment+ObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKComment+ObjectMapping.h"; sourceTree = "<group>"; };
 		76109D8B1711EF33005176A7 /* DKComment+ObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKComment+ObjectMapping.m"; sourceTree = "<group>"; };
-		76109D8D1711F037005176A7 /* DKComments+ObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKComments+ObjectMapping.h"; sourceTree = "<group>"; };
-		76109D8E1711F038005176A7 /* DKComments+ObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKComments+ObjectMapping.m"; sourceTree = "<group>"; };
-		76109D901711F130005176A7 /* DKPlayers+ObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKPlayers+ObjectMapping.h"; sourceTree = "<group>"; };
-		76109D911711F132005176A7 /* DKPlayers+ObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKPlayers+ObjectMapping.m"; sourceTree = "<group>"; };
-		76109D931711F202005176A7 /* DKPlayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPlayers.h; sourceTree = "<group>"; };
-		76109D941711F202005176A7 /* DKPlayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPlayers.m; sourceTree = "<group>"; };
 		76109D961711F243005176A7 /* DKShot+ObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKShot+ObjectMapping.h"; sourceTree = "<group>"; };
 		76109D971711F245005176A7 /* DKShot+ObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKShot+ObjectMapping.m"; sourceTree = "<group>"; };
-		76109D991711F3D2005176A7 /* DKShots+ObjectMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DKShots+ObjectMapping.h"; sourceTree = "<group>"; };
-		76109D9A1711F3D5005176A7 /* DKShots+ObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DKShots+ObjectMapping.m"; sourceTree = "<group>"; };
+		76A150D1171873E400751C92 /* DKComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKComment.h; sourceTree = "<group>"; };
+		76A150D2171873E400751C92 /* DKComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKComment.m; sourceTree = "<group>"; };
+		76A150D4171873E500751C92 /* DKPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPlayer.h; sourceTree = "<group>"; };
+		76A150D5171873E500751C92 /* DKPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPlayer.m; sourceTree = "<group>"; };
+		76A150D7171873E500751C92 /* DKShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKShot.h; sourceTree = "<group>"; };
+		76A150D8171873E500751C92 /* DKShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKShot.m; sourceTree = "<group>"; };
+		76A150E4171889DE00751C92 /* DKCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCollection.h; sourceTree = "<group>"; };
+		76A150E5171889DE00751C92 /* DKCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCollection.m; sourceTree = "<group>"; };
+		76A150E717188A1C00751C92 /* DKShots.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKShots.h; sourceTree = "<group>"; };
+		76A150E817188A1C00751C92 /* DKShots.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKShots.m; sourceTree = "<group>"; };
+		76A150EA17188A6000751C92 /* DKPlayers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPlayers.h; sourceTree = "<group>"; };
+		76A150EB17188A6000751C92 /* DKPlayers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKPlayers.m; sourceTree = "<group>"; };
+		76A150ED17188A9E00751C92 /* DKComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKComments.h; sourceTree = "<group>"; };
+		76A150EE17188A9F00751C92 /* DKComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKComments.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				76109D3B1711B854005176A7 /* DKModel.h */,
+				76A150DA1718885700751C92 /* Object Model */,
 				76109D821711ED7D005176A7 /* Core Data Model */,
 				76109D831711EDA5005176A7 /* Category */,
 			);
@@ -277,19 +272,13 @@
 		76109D821711ED7D005176A7 /* Core Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				76109D4F1711B8A9005176A7 /* DKComment.h */,
-				76109D381711B854005176A7 /* DKComment.m */,
-				76109D391711B854005176A7 /* DKComments.h */,
-				76109D3A1711B854005176A7 /* DKComments.m */,
-				76109D7F1711DF02005176A7 /* DKPlayer.h */,
-				76109D801711DF03005176A7 /* DKPlayer.m */,
-				76109D931711F202005176A7 /* DKPlayers.h */,
-				76109D941711F202005176A7 /* DKPlayers.m */,
-				76109D401711B854005176A7 /* DKShot.h */,
-				76109D411711B854005176A7 /* DKShot.m */,
-				76109D421711B854005176A7 /* DKShots.h */,
-				76109D431711B854005176A7 /* DKShots.m */,
 				76109D441711B854005176A7 /* DribbbleKitModel.xcdatamodeld */,
+				76A150D7171873E500751C92 /* DKShot.h */,
+				76A150D8171873E500751C92 /* DKShot.m */,
+				76A150D4171873E500751C92 /* DKPlayer.h */,
+				76A150D5171873E500751C92 /* DKPlayer.m */,
+				76A150D1171873E400751C92 /* DKComment.h */,
+				76A150D2171873E400751C92 /* DKComment.m */,
 			);
 			name = "Core Data Model";
 			sourceTree = "<group>";
@@ -297,29 +286,38 @@
 		76109D831711EDA5005176A7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				76109D891711EEA6005176A7 /* Object Mapping */,
+				76109D891711EEA6005176A7 /* Object Mapping (TODO) */,
 			);
 			name = Category;
 			sourceTree = "<group>";
 		};
-		76109D891711EEA6005176A7 /* Object Mapping */ = {
+		76109D891711EEA6005176A7 /* Object Mapping (TODO) */ = {
 			isa = PBXGroup;
 			children = (
 				76109D881711EE7C005176A7 /* DKObjectMappingProtocol.h */,
 				76109D8A1711EF32005176A7 /* DKComment+ObjectMapping.h */,
 				76109D8B1711EF33005176A7 /* DKComment+ObjectMapping.m */,
-				76109D8D1711F037005176A7 /* DKComments+ObjectMapping.h */,
-				76109D8E1711F038005176A7 /* DKComments+ObjectMapping.m */,
 				76109D851711EE2C005176A7 /* DKPlayer+ObjectMapping.h */,
 				76109D861711EE2C005176A7 /* DKPlayer+ObjectMapping.m */,
-				76109D901711F130005176A7 /* DKPlayers+ObjectMapping.h */,
-				76109D911711F132005176A7 /* DKPlayers+ObjectMapping.m */,
 				76109D961711F243005176A7 /* DKShot+ObjectMapping.h */,
 				76109D971711F245005176A7 /* DKShot+ObjectMapping.m */,
-				76109D991711F3D2005176A7 /* DKShots+ObjectMapping.h */,
-				76109D9A1711F3D5005176A7 /* DKShots+ObjectMapping.m */,
 			);
-			name = "Object Mapping";
+			name = "Object Mapping (TODO)";
+			sourceTree = "<group>";
+		};
+		76A150DA1718885700751C92 /* Object Model */ = {
+			isa = PBXGroup;
+			children = (
+				76A150E4171889DE00751C92 /* DKCollection.h */,
+				76A150E5171889DE00751C92 /* DKCollection.m */,
+				76A150E717188A1C00751C92 /* DKShots.h */,
+				76A150E817188A1C00751C92 /* DKShots.m */,
+				76A150EA17188A6000751C92 /* DKPlayers.h */,
+				76A150EB17188A6000751C92 /* DKPlayers.m */,
+				76A150ED17188A9E00751C92 /* DKComments.h */,
+				76A150EE17188A9F00751C92 /* DKComments.m */,
+			);
+			name = "Object Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,19 +430,17 @@
 				76109D1C1711B832005176A7 /* DKAppDelegate.m in Sources */,
 				76109D2B1711B833005176A7 /* DKViewController.m in Sources */,
 				76109D461711B854005176A7 /* DKAPIEngine.m in Sources */,
-				76109D471711B854005176A7 /* DKComment.m in Sources */,
-				76109D481711B854005176A7 /* DKComments.m in Sources */,
-				76109D4B1711B854005176A7 /* DKShot.m in Sources */,
-				76109D4C1711B854005176A7 /* DKShots.m in Sources */,
 				76109D4D1711B854005176A7 /* DribbbleKitModel.xcdatamodeld in Sources */,
-				76109D811711DF03005176A7 /* DKPlayer.m in Sources */,
 				76109D871711EE2C005176A7 /* DKPlayer+ObjectMapping.m in Sources */,
 				76109D8C1711EF33005176A7 /* DKComment+ObjectMapping.m in Sources */,
-				76109D8F1711F039005176A7 /* DKComments+ObjectMapping.m in Sources */,
-				76109D921711F133005176A7 /* DKPlayers+ObjectMapping.m in Sources */,
-				76109D951711F202005176A7 /* DKPlayers.m in Sources */,
 				76109D981711F247005176A7 /* DKShot+ObjectMapping.m in Sources */,
-				76109D9B1711F3D6005176A7 /* DKShots+ObjectMapping.m in Sources */,
+				76A150D3171873E400751C92 /* DKComment.m in Sources */,
+				76A150D6171873E500751C92 /* DKPlayer.m in Sources */,
+				76A150D9171873E500751C92 /* DKShot.m in Sources */,
+				76A150E6171889DE00751C92 /* DKCollection.m in Sources */,
+				76A150E917188A1D00751C92 /* DKShots.m in Sources */,
+				76A150EC17188A6100751C92 /* DKPlayers.m in Sources */,
+				76A150EF17188AA000751C92 /* DKComments.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +591,7 @@
 				76109D301711B833005176A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

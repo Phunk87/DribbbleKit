@@ -1,13 +1,12 @@
 //
 //  DKComment.m
-//  DribbbleKit
+//  DribbbleKitDemo
 //
-//  Created by 0day on 13-4-6.
+//  Created by 0day on 13-4-13.
 //  Copyright (c) 2013年 All4Love. All rights reserved.
 //
 
 #import "DKComment.h"
-#import "DKComments.h"
 #import "DKPlayer.h"
 
 
@@ -18,6 +17,5 @@
 @dynamic creationDate;
 @dynamic likesCount;
 @dynamic player;
-@dynamic comments;
 
 @end

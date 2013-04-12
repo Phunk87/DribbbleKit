@@ -2,14 +2,11 @@
 //  DKPlayer.m
 //  DribbbleKitDemo
 //
-//  Created by 0day on 13-4-8.
+//  Created by 0day on 13-4-13.
 //  Copyright (c) 2013年 All4Love. All rights reserved.
 //
 
 #import "DKPlayer.h"
-#import "DKComment.h"
-#import "DKPlayers.h"
-#import "DKShot.h"
 
 
 @implementation DKPlayer
@@ -28,13 +25,10 @@
 @dynamic name;
 @dynamic playerID;
 @dynamic reboundsCount;
+@dynamic reboundsReceivedCount;
 @dynamic shotsCount;
 @dynamic twitterScreenName;
 @dynamic url;
 @dynamic userName;
-@dynamic reboundsReceivedCount;
-@dynamic comment;
-@dynamic players;
-@dynamic shot;
 
 @end

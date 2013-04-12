@@ -1,15 +1,15 @@
 //
 //  DKComment.h
-//  DribbbleKit
+//  DribbbleKitDemo
 //
-//  Created by 0day on 13-4-6.
+//  Created by 0day on 13-4-13.
 //  Copyright (c) 2013年 All4Love. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class DKComments, DKPlayer;
+@class DKPlayer;
 
 @interface DKComment : NSManagedObject
 
@@ -18,6 +18,5 @@
 @property (nonatomic, retain) NSDate * creationDate;
 @property (nonatomic, retain) NSNumber * likesCount;
 @property (nonatomic, retain) DKPlayer *player;
-@property (nonatomic, retain) DKComments *comments;
 
 @end

@@ -10,6 +10,10 @@
 
 #import "DKPlayer+ObjectMapping.h"
 
+static RKRequestDescriptor *RequestDescriptor = nil;
+static RKResponseDescriptor *ResponseDescriptor = nil;
+static RKEntityMapping *EntityResponseMapping = nil;
+
 @implementation DKComment (ObjectMapping)
 
 + (NSDictionary *)objectMappingDictionary {
@@ -34,38 +38,45 @@
 }
 
 + (RKRequestDescriptor *)objectRequestDesctiptor {
-    RKObjectMapping *objectMapping = [self objectRequestMapping];
-    RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:objectMapping
-                                                                                   objectClass:[self class]
-                                                                                   rootKeyPath:nil];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        RKObjectMapping *objectMapping = [self objectRequestMapping];
+        RequestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:objectMapping
+                                                                  objectClass:[self class]
+                                                                  rootKeyPath:nil];
+    });
     
-    return requestDescriptor;
+    return RequestDescriptor;
 }
 
 + (RKObjectMapping *)objectResponseMappingWithManagedObjectStore:(RKManagedObjectStore *)managedObjectStore {
-    RKEntityMapping *playerMapping = (RKEntityMapping *)[DKPlayer objectResponseMappingWithManagedObjectStore:managedObjectStore];
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        EntityResponseMapping = [RKEntityMapping mappingForEntityForName:NSStringFromClass([self class])
+                                                                     inManagedObjectStore:managedObjectStore];
+        EntityResponseMapping.identificationAttributes = @[@"commentID"];
+        [EntityResponseMapping addAttributeMappingsFromDictionary:[self objectMappingDictionary]];
+        [EntityResponseMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"player"
+                                                                                              toKeyPath:@"player"
+                                                                                            withMapping:EntityResponseMapping]];
+    });
     
-    RKEntityMapping *entityResponseMapping = [RKEntityMapping mappingForEntityForName:NSStringFromClass([self class])
-                                                                 inManagedObjectStore:managedObjectStore];
-    entityResponseMapping.identificationAttributes = @[@"commentID"];
-    [entityResponseMapping addAttributeMappingsFromDictionary:[self objectMappingDictionary]];
-    [entityResponseMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"player"
-                                                                                          toKeyPath:@"player"
-                                                                                        withMapping:playerMapping]];
-    
-    return entityResponseMapping;
+    return EntityResponseMapping;
 }
 
 + (RKResponseDescriptor *)objectResponseDescriptorWithManagedObjectStore:(RKManagedObjectStore *)managedObjectStore {
-    NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful);
+        
+        RKEntityMapping *objectMapping = (RKEntityMapping *)[self objectResponseMappingWithManagedObjectStore:managedObjectStore];
+        ResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:objectMapping
+                                                                     pathPattern:nil
+                                                                         keyPath:nil
+                                                                     statusCodes:statusCodes];
+    });
     
-    RKEntityMapping *objectMapping = (RKEntityMapping *)[self objectResponseMappingWithManagedObjectStore:managedObjectStore];
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:objectMapping
-                                                                                       pathPattern:nil
-                                                                                           keyPath:nil
-                                                                                       statusCodes:statusCodes];
-    
-    return responseDescriptor;
+    return ResponseDescriptor;
 }
 
 @end

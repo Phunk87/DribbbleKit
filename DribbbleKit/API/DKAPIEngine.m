@@ -109,7 +109,7 @@
                           }];
 }
 
-- (void)followingPlayersWithPlayer:(DKPlayer *)player collectionInfo:(DKCollection *)collection success:(void (^)(DKPlayers *))successHandler failure:(void (^)(NSError *))failureHandler {
+- (void)followingsWithPlayer:(DKPlayer *)player collectionInfo:(DKCollection *)collection success:(void (^)(DKPlayers *))successHandler failure:(void (^)(NSError *))failureHandler {
     [self.objectManager getObject:player
                              path:RKPathFromPatternWithObject(@"/players/:playerID/following", player)
                        parameters:(collection) ? [collection dictionaryValue] : nil
@@ -151,6 +151,10 @@
 
 - (void)shotsInResponseToShotWithShotID:(NSString *)shotID success:(void (^)(DKShots *))successHandler failure:(void (^)(NSError *))failureHandler {
     
+}
+
+- (void)shotsWithType:(DKShotsType)type collectionInfo:(DKCollection *)collection success:(void (^)(DKShots *))successHandler failure:(void (^)(NSError *))failureHandler {
+
 }
 
 #pragma mark - Private

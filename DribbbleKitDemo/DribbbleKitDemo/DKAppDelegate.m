@@ -27,10 +27,10 @@
                                                                                 collectionInfo:nil
                                                                                        success:nil
                                                                                        failure:nil];
-                                               [[DKAPIEngine sharedEngine] followingPlayersWithPlayer:player
-                                                                                       collectionInfo:nil
-                                                                                              success:nil
-                                                                                              failure:nil];
+                                               [[DKAPIEngine sharedEngine] followingsWithPlayer:player
+                                                                                 collectionInfo:nil
+                                                                                        success:nil
+                                                                                        failure:nil];
                                            }
                                            failure:nil];
     

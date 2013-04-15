@@ -9,11 +9,14 @@ In your Terminal type:
 ```
 $ cd [your project directory]
 $ clone https://github.com/0day2010/DribbbleKit.git
+$ cd DribbbleKit
 $ git submodule update --init
 ```
 
 You can run Demo project when git clone and submodule update complete.
 
+## Access to API
+==========
 You will find out there is one APIEngine, you can send all your Dribbble request through it.
 ```
 // Access to APIEngine

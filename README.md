@@ -1,7 +1,7 @@
 # DribbbleKit
 ===========
 
-DribbbleKit is a modern Objective-C framework for implementing Dribbble API on iOS. It's RESTFull is based on RestKit.
+DribbbleKit is a modern Objective-C framework for implementing Dribbble API on iOS. RESTFull and ObjectMapping is based on RestKit.
 
 ## Quick start
 ===========

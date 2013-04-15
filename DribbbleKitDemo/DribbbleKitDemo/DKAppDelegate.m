@@ -23,11 +23,11 @@
     // Override point for customization after application launch.
     [[DKAPIEngine sharedEngine] playerWithPlayerID:@"misu"
                                            success:^(DKPlayer *player){
-                                               [[DKAPIEngine sharedEngine] followersWithPlayer:player
+                                               [[DKAPIEngine sharedEngine] followersForPlayer:player
                                                                                 collectionInfo:nil
                                                                                        success:nil
                                                                                        failure:nil];
-                                               [[DKAPIEngine sharedEngine] followingsWithPlayer:player
+                                               [[DKAPIEngine sharedEngine] followingsForPlayer:player
                                                                                  collectionInfo:nil
                                                                                         success:nil
                                                                                         failure:nil];
@@ -36,7 +36,7 @@
     
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

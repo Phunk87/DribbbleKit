@@ -81,7 +81,6 @@
                                   successHandler([[result array] lastObject]);
                               }
                           }
-
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
                               NSLog(@"!!! %@", error);
                               if (failureHandler) {
@@ -90,8 +89,8 @@
                           }];
 }
 
-- (void)followersWithPlayer:(DKPlayer *)player collectionInfo:(DKCollection *)collection success:(void (^)(DKPlayers *))successHandler failure:(void (^)(NSError *))failureHandler {
-    [self.objectManager getObject:player
+- (void)followersForPlayer:(DKPlayer *)player collectionInfo:(DKCollection *)collection success:(void (^)(DKPlayers *))successHandler failure:(void (^)(NSError *))failureHandler {
+    [self.objectManager getObject:nil
                              path:RKPathFromPatternWithObject(@"/players/:playerID/followers", player)
                        parameters:(collection) ? [collection dictionaryValue] : nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
@@ -100,7 +99,6 @@
                                   successHandler([[result array] lastObject]);
                               }
                           }
-     
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
                               NSLog(@"!!! %@", error);
                               if (failureHandler) {
@@ -109,8 +107,8 @@
                           }];
 }
 
-- (void)followingsWithPlayer:(DKPlayer *)player collectionInfo:(DKCollection *)collection success:(void (^)(DKPlayers *))successHandler failure:(void (^)(NSError *))failureHandler {
-    [self.objectManager getObject:player
+- (void)followingsForPlayer:(DKPlayer *)player collectionInfo:(DKCollection *)collection success:(void (^)(DKPlayers *))successHandler failure:(void (^)(NSError *))failureHandler {
+    [self.objectManager getObject:nil
                              path:RKPathFromPatternWithObject(@"/players/:playerID/following", player)
                        parameters:(collection) ? [collection dictionaryValue] : nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
@@ -119,7 +117,24 @@
                                   successHandler([[result array] lastObject]);
                               }
                           }
-     
+                          failure:^(RKObjectRequestOperation *operation, NSError *error){
+                              NSLog(@"!!! %@", error);
+                              if (failureHandler) {
+                                  failureHandler(error);
+                              }
+                          }];
+}
+
+- (void)draftedPlayersByPlayer:(DKPlayer *)player collectionInfo:(DKCollection *)collection success:(void (^)(DKPlayers *))successHandler failure:(void (^)(NSError *))failureHandler {
+    [self.objectManager getObject:nil
+                             path:RKPathFromPatternWithObject(@"/players/:playerID/draftees", player)
+                       parameters:(collection) ? [collection dictionaryValue] : nil
+                          success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+                              NSLog(@"!!! %@", result);
+                              if (successHandler) {
+                                  successHandler([[result array] lastObject]);
+                              }
+                          }
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
                               NSLog(@"!!! %@", error);
                               if (failureHandler) {
@@ -140,7 +155,6 @@
                                   successHandler([[result array] lastObject]);
                               }
                           }
-     
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
                               NSLog(@"!!! %@", error);
                               if (failureHandler) {
@@ -149,12 +163,115 @@
                           }];
 }
 
-- (void)shotsInResponseToShotWithShotID:(NSString *)shotID success:(void (^)(DKShots *))successHandler failure:(void (^)(NSError *))failureHandler {
-    
+- (void)shotsInResponseToShot:(DKShot *)shot collectionInfo:(DKCollection *)collection success:(void (^)(DKShots *))successHandler failure:(void (^)(NSError *))failureHandler {
+    [self.objectManager getObject:nil
+                             path:RKPathFromPatternWithObject(@"/shots/:shotID/rebounds", shot)
+                       parameters:(collection) ? [collection dictionaryValue] : nil
+                          success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+                              NSLog(@"!!! %@", result);
+                              if (successHandler) {
+                                  successHandler([[result array] lastObject]);
+                              }
+                          }
+                          failure:^(RKObjectRequestOperation *operation, NSError *error){
+                              NSLog(@"!!! %@", error);
+                              if (failureHandler) {
+                                  failureHandler(error);
+                              }
+                          }];
 }
 
 - (void)shotsWithType:(DKShotsType)type collectionInfo:(DKCollection *)collection success:(void (^)(DKShots *))successHandler failure:(void (^)(NSError *))failureHandler {
+    NSAssert(type != kDKShotsTypeUnknow, @"unkonw type param");
+    
+    NSString *typePath = nil;
+    switch (type) {
+        case kDKShotsTypeDebuts:
+            typePath = @"/shots/debuts";
+            break;
+        case kDKShotsTypeEveryone:
+            typePath = @"/shots/everyone";
+            break;
+        case kDKShotsTypePopular:
+            typePath = @"/shots/popular";
+            break;
+        default:
+            break;
+    }
+    
+    [self.objectManager getObject:nil
+                             path:typePath
+                       parameters:(collection) ? [collection dictionaryValue] : nil
+                          success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+                              NSLog(@"!!! %@", result);
+                              if (successHandler) {
+                                  successHandler([[result array] lastObject]);
+                              }
+                          }
+                          failure:^(RKObjectRequestOperation *operation, NSError *error){
+                              NSLog(@"!!! %@", error);
+                              if (failureHandler) {
+                                  failureHandler(error);
+                              }
+                          }];
+}
 
+- (void)recentShotsByPlayer:(DKPlayer *)player collectionInfo:(DKCollection *)collection success:(void (^)(DKShots *))successHandler failure:(void (^)(NSError *))failureHandler {
+    [self.objectManager getObject:nil
+                             path:RKPathFromPatternWithObject(@"/players/:playerID/shots", player)
+                       parameters:(collection) ? [collection dictionaryValue] : nil
+                          success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+                              NSLog(@"!!! %@", result);
+                              if (successHandler) {
+                                  successHandler([[result array] lastObject]);
+                              }
+                          }
+                          failure:^(RKObjectRequestOperation *operation, NSError *error){
+                              NSLog(@"!!! %@", error);
+                              if (failureHandler) {
+                                  failureHandler(error);
+                              }
+                          }];
+}
+
+// TODO: /players/:id/shots/following
+
+- (void)shotsLikedByPlayer:(DKPlayer *)player collectionInfo:(DKCollection *)collection success:(void (^)(DKShots *))successHandler failure:(void (^)(NSError *))failureHandler {
+    [self.objectManager getObject:nil
+                             path:RKPathFromPatternWithObject(@"/players/:playerID/shots/likes", player)
+                       parameters:(collection) ? [collection dictionaryValue] : nil
+                          success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+                              NSLog(@"!!! %@", result);
+                              if (successHandler) {
+                                  successHandler([[result array] lastObject]);
+                              }
+                          }
+                          failure:^(RKObjectRequestOperation *operation, NSError *error){
+                              NSLog(@"!!! %@", error);
+                              if (failureHandler) {
+                                  failureHandler(error);
+                              }
+                          }];
+}
+
+#pragma mark - Comments
+
+- (void)commentsToShot:(DKShot *)shot collectionInfo:(DKCollection *)collection success:(void (^)(DKComments *))successHandler failure:(void (^)(NSError *))failureHandler {
+    [self.objectManager getObject:nil
+                             path:RKPathFromPatternWithObject(@"/shots/:shotID/comments", shot)
+                       parameters:(collection) ? [collection dictionaryValue] : nil
+                          success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
+                              NSLog(@"!!! %@", result);
+                              if (successHandler) {
+                                  successHandler([[result array] lastObject]);
+                              }
+                          }
+                          failure:^(RKObjectRequestOperation *operation, NSError *error){
+                              NSLog(@"!!! %@", error);
+                              if (failureHandler) {
+                                  failureHandler(error);
+                              }
+                          }];
 }
 
 #pragma mark - Private
@@ -224,11 +341,11 @@
     RKRequestDescriptor *shotRequestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:shotRequestMapping objectClass:[DKShot class] rootKeyPath:nil];
     [objectManager addRequestDescriptor:shotRequestDescriptor];
     
-    RKEntityMapping *shotResonseMapping = [RKEntityMapping mappingForEntityForName:@"DKShot" inManagedObjectStore:managedObjectStore];
-    shotResonseMapping.identificationAttributes = @[@"shotID"];
-    [shotResonseMapping addAttributeMappingsFromDictionary:shotObjectMappingDictionary];
-    [shotResonseMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"player" toKeyPath:@"player" withMapping:playerResponseMapping]];
-    RKResponseDescriptor *shotResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:shotResonseMapping
+    RKEntityMapping *shotResponseMapping = [RKEntityMapping mappingForEntityForName:@"DKShot" inManagedObjectStore:managedObjectStore];
+    shotResponseMapping.identificationAttributes = @[@"shotID"];
+    [shotResponseMapping addAttributeMappingsFromDictionary:shotObjectMappingDictionary];
+    [shotResponseMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"player" toKeyPath:@"player" withMapping:playerResponseMapping]];
+    RKResponseDescriptor *shotResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:shotResponseMapping
                                                                                            pathPattern:@"/shots/:shotID"
                                                                                                keyPath:nil
                                                                                            statusCodes:statusCodes];
@@ -292,7 +409,62 @@
     [objectManager addResponseDescriptor:playersResponseDescriptor3];
     
     // Shots
+    RKObjectMapping *shotsRequestMapping = [RKObjectMapping requestMapping];
+    [shotsRequestMapping addAttributeMappingsFromDictionary:collectionObjectMappingDictionary];
+    [shotsRequestMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"shots" toKeyPath:@"shots" withMapping:shotRequestMapping]];
+    RKRequestDescriptor *shotsRequestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:shotsRequestMapping objectClass:[DKShots class] rootKeyPath:nil];
+    [objectManager addRequestDescriptor:shotsRequestDescriptor];
+    
+    RKObjectMapping *shotsResopnseMapping = [RKObjectMapping mappingForClass:[DKShots class]];
+    [shotsResopnseMapping addAttributeMappingsFromDictionary:collectionObjectMappingDictionary];
+    [shotsResopnseMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"shots" toKeyPath:@"shots" withMapping:shotResponseMapping]];
+    RKResponseDescriptor *shotsResponseDescriptor1 = [RKResponseDescriptor responseDescriptorWithMapping:shotsResopnseMapping
+                                                                                            pathPattern:@"/shots/:shotID/rebounds"
+                                                                                                keyPath:nil
+                                                                                            statusCodes:statusCodes];
+    RKResponseDescriptor *shotsResponseDescriptor2 = [RKResponseDescriptor responseDescriptorWithMapping:shotsResopnseMapping
+                                                                                            pathPattern:@"/shots/debuts"
+                                                                                                keyPath:nil
+                                                                                            statusCodes:statusCodes];
+    RKResponseDescriptor *shotsResponseDescriptor3 = [RKResponseDescriptor responseDescriptorWithMapping:shotsResopnseMapping
+                                                                                            pathPattern:@"/shots/everyone"
+                                                                                                keyPath:nil
+                                                                                            statusCodes:statusCodes];
+    RKResponseDescriptor *shotsResponseDescriptor4 = [RKResponseDescriptor responseDescriptorWithMapping:shotsResopnseMapping
+                                                                                            pathPattern:@"/shots/popular"
+                                                                                                keyPath:nil
+                                                                                            statusCodes:statusCodes]; 
+    RKResponseDescriptor *shotsResponseDescriptor5 = [RKResponseDescriptor responseDescriptorWithMapping:shotsResopnseMapping
+                                                                                             pathPattern:@"/players/:playerID/shots"
+                                                                                                 keyPath:nil
+                                                                                             statusCodes:statusCodes];
+    RKResponseDescriptor *shotsResponseDescriptor6 = [RKResponseDescriptor responseDescriptorWithMapping:shotsResopnseMapping
+                                                                                             pathPattern:@"/players/:playerID/shots/likes"
+                                                                                                 keyPath:nil
+                                                                                             statusCodes:statusCodes];
+    
+    [objectManager addResponseDescriptor:shotsResponseDescriptor1];
+    [objectManager addResponseDescriptor:shotsResponseDescriptor2];
+    [objectManager addResponseDescriptor:shotsResponseDescriptor3];
+    [objectManager addResponseDescriptor:shotsResponseDescriptor4];
+    [objectManager addResponseDescriptor:shotsResponseDescriptor5];
+    [objectManager addResponseDescriptor:shotsResponseDescriptor6];
+    
     // Comments
+    RKObjectMapping *commentsRequestMapping = [RKObjectMapping requestMapping];
+    [commentsRequestMapping addAttributeMappingsFromDictionary:collectionObjectMappingDictionary];
+    [commentsRequestMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"comments" toKeyPath:@"comments" withMapping:commentRequestMapping]];
+    RKRequestDescriptor *commentsRequestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:commentsRequestMapping objectClass:[DKComments class] rootKeyPath:nil];
+    [objectManager addRequestDescriptor:commentsRequestDescriptor];
+    
+    RKObjectMapping *commentsResponseMapping = [RKObjectMapping mappingForClass:[DKComments class]];
+    [commentsResponseMapping addAttributeMappingsFromDictionary:collectionObjectMappingDictionary];
+    [commentsResponseMapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"comments" toKeyPath:@"comments" withMapping:commentResponseMapping]];
+    RKResponseDescriptor *commentsResponseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:commentsResponseMapping
+                                                                                               pathPattern:@"/shots/:shotID/comments"
+                                                                                                   keyPath:nil
+                                                                                               statusCodes:statusCodes];
+    [objectManager addResponseDescriptor:commentsResponseDescriptor];
 }
 
 @end

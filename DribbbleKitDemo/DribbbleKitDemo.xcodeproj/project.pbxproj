@@ -221,10 +221,10 @@
 		76109D311711B854005176A7 /* DribbbleKit */ = {
 			isa = PBXGroup;
 			children = (
-				76109D4E1711B897005176A7 /* Vendor */,
-				76109D321711B854005176A7 /* API */,
 				76109D351711B854005176A7 /* DribbbleKit.h */,
+				76109D321711B854005176A7 /* API */,
 				76109D361711B854005176A7 /* Model */,
+				76109D4E1711B897005176A7 /* Vendor */,
 			);
 			name = DribbbleKit;
 			path = ../DribbbleKit;

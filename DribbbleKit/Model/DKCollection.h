@@ -17,4 +17,7 @@
 
 - (NSDictionary *)dictionaryValue;
 
+- (DKCollection *)nextPageCollection;
+- (BOOL)hasNextPage;
+
 @end

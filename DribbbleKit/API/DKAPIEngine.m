@@ -76,13 +76,11 @@
                              path:[NSString stringWithFormat:@"/players/%@", playerID]
                        parameters:nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-                              NSLog(@"!!! %@", result);
                               if (successHandler) {
                                   successHandler([[result array] lastObject]);
                               }
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
-                              NSLog(@"!!! %@", error);
                               if (failureHandler) {
                                   failureHandler(error);
                               }
@@ -94,13 +92,11 @@
                              path:RKPathFromPatternWithObject(@"/players/:playerID/followers", player)
                        parameters:(collection) ? [collection dictionaryValue] : nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-                              NSLog(@"!!! %@", result);
                               if (successHandler) {
                                   successHandler([[result array] lastObject]);
                               }
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
-                              NSLog(@"!!! %@", error);
                               if (failureHandler) {
                                   failureHandler(error);
                               }
@@ -112,13 +108,11 @@
                              path:RKPathFromPatternWithObject(@"/players/:playerID/following", player)
                        parameters:(collection) ? [collection dictionaryValue] : nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-                              NSLog(@"!!! %@", result);
                               if (successHandler) {
                                   successHandler([[result array] lastObject]);
                               }
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
-                              NSLog(@"!!! %@", error);
                               if (failureHandler) {
                                   failureHandler(error);
                               }
@@ -130,13 +124,11 @@
                              path:RKPathFromPatternWithObject(@"/players/:playerID/draftees", player)
                        parameters:(collection) ? [collection dictionaryValue] : nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-                              NSLog(@"!!! %@", result);
                               if (successHandler) {
                                   successHandler([[result array] lastObject]);
                               }
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
-                              NSLog(@"!!! %@", error);
                               if (failureHandler) {
                                   failureHandler(error);
                               }
@@ -150,13 +142,11 @@
                              path:[NSString stringWithFormat:@"/shots/%@", shotID]
                        parameters:nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-                              NSLog(@"!!! %@", result);
                               if (successHandler) {
                                   successHandler([[result array] lastObject]);
                               }
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
-                              NSLog(@"!!! %@", error);
                               if (failureHandler) {
                                   failureHandler(error);
                               }
@@ -168,13 +158,11 @@
                              path:RKPathFromPatternWithObject(@"/shots/:shotID/rebounds", shot)
                        parameters:(collection) ? [collection dictionaryValue] : nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-                              NSLog(@"!!! %@", result);
                               if (successHandler) {
                                   successHandler([[result array] lastObject]);
                               }
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
-                              NSLog(@"!!! %@", error);
                               if (failureHandler) {
                                   failureHandler(error);
                               }
@@ -203,13 +191,11 @@
                              path:typePath
                        parameters:(collection) ? [collection dictionaryValue] : nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-                              NSLog(@"!!! %@", result);
                               if (successHandler) {
                                   successHandler([[result array] lastObject]);
                               }
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
-                              NSLog(@"!!! %@", error);
                               if (failureHandler) {
                                   failureHandler(error);
                               }
@@ -221,13 +207,11 @@
                              path:RKPathFromPatternWithObject(@"/players/:playerID/shots", player)
                        parameters:(collection) ? [collection dictionaryValue] : nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-                              NSLog(@"!!! %@", result);
                               if (successHandler) {
                                   successHandler([[result array] lastObject]);
                               }
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
-                              NSLog(@"!!! %@", error);
                               if (failureHandler) {
                                   failureHandler(error);
                               }
@@ -241,13 +225,11 @@
                              path:RKPathFromPatternWithObject(@"/players/:playerID/shots/likes", player)
                        parameters:(collection) ? [collection dictionaryValue] : nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-                              NSLog(@"!!! %@", result);
                               if (successHandler) {
                                   successHandler([[result array] lastObject]);
                               }
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
-                              NSLog(@"!!! %@", error);
                               if (failureHandler) {
                                   failureHandler(error);
                               }
@@ -261,13 +243,11 @@
                              path:RKPathFromPatternWithObject(@"/shots/:shotID/comments", shot)
                        parameters:(collection) ? [collection dictionaryValue] : nil
                           success:^(RKObjectRequestOperation *operation, RKMappingResult *result) {
-                              NSLog(@"!!! %@", result);
                               if (successHandler) {
                                   successHandler([[result array] lastObject]);
                               }
                           }
                           failure:^(RKObjectRequestOperation *operation, NSError *error){
-                              NSLog(@"!!! %@", error);
                               if (failureHandler) {
                                   failureHandler(error);
                               }
@@ -442,6 +422,10 @@
                                                                                              pathPattern:@"/players/:playerID/shots/likes"
                                                                                                  keyPath:nil
                                                                                              statusCodes:statusCodes];
+    RKResponseDescriptor *shotsResponseDescriptor7 = [RKResponseDescriptor responseDescriptorWithMapping:shotsResopnseMapping
+                                                                                             pathPattern:@"/players/:playerID/shots/following"
+                                                                                                 keyPath:nil
+                                                                                             statusCodes:statusCodes];
     
     [objectManager addResponseDescriptor:shotsResponseDescriptor1];
     [objectManager addResponseDescriptor:shotsResponseDescriptor2];
@@ -449,6 +433,7 @@
     [objectManager addResponseDescriptor:shotsResponseDescriptor4];
     [objectManager addResponseDescriptor:shotsResponseDescriptor5];
     [objectManager addResponseDescriptor:shotsResponseDescriptor6];
+    [objectManager addResponseDescriptor:shotsResponseDescriptor7];
     
     // Comments
     RKObjectMapping *commentsRequestMapping = [RKObjectMapping requestMapping];

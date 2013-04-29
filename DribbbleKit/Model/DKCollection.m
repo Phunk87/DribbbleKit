@@ -19,4 +19,23 @@
              };
 }
 
+- (DKCollection *)nextPageCollection {
+    DKCollection *nextPageCollection = nil;
+    if ([self hasNextPage]) {
+        nextPageCollection = [[[DKCollection alloc] init] autorelease];
+        nextPageCollection.page = _page + 1;
+        nextPageCollection.pageCount = _pageCount;
+        nextPageCollection.pageSize = _pageSize;
+        nextPageCollection.total = _total;
+    }
+    
+    return nextPageCollection;
+}
+
+- (BOOL)hasNextPage {
+    if (self.page < self.pageCount)
+        return YES;
+    return NO;
+}
+
 @end
